@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — AETHERA</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <img src="assets/images/logo.svg" alt="AETHERA Logo" class="logo"/>
+      <nav class="main-nav">
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="wholesale.html">Wholesale</a>
+        <a href="sustainability.html">Sustainability</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h1>Contact</h1>
+      <p class="lead">Questions, wholesale inquiries, or collaborations — send us a note.</p>
+
+      <!-- Simple, provider-agnostic form; replace action with Formspree/EmailJS endpoint -->
+      <form class="products" style="gap:1rem; grid-template-columns:1fr;" method="post" action="#">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" class="input" required/>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" class="input" required/>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" class="input" required></textarea>
+        </div>
+        <div>
+          <button class="btn" type="submit">Send</button>
+        </div>
+      </form>
+
+      <p style="margin-top:1rem">Prefer email? <a href="mailto:hello@aethera.gr">hello@aethera.gr</a></p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 AETHERA. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="legal/privacy.html">Privacy Policy</a>
+        <a href="legal/terms.html">Terms &amp; Conditions</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
