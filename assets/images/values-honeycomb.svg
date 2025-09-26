@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" aria-hidden="true" role="img">
+  <!-- Transparent tile with subtle honeycomb lines -->
+  <defs>
+    <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#cfa72b"/>
+      <stop offset="100%" stop-color="#b38e23"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="320" height="320" fill="none"/>
+
+  <!-- Draw a staggered hex grid; low opacity for subtlety -->
+  <g stroke="url(#goldLine)" stroke-width="1.5" opacity="0.12" fill="none">
+    <!-- function to draw a hex path: sized to 40px radius -->
+    <!-- row 1 -->
+    <path d="M40,20 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M120,20 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M200,20 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M280,20 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+
+    <!-- row 2 (offset) -->
+    <path d="M80,56 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M160,56 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M240,56 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+
+    <!-- row 3 -->
+    <path d="M40,92 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M120,92 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M200,92 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M280,92 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+
+    <!-- row 4 (offset) -->
+    <path d="M80,128 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M160,128 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M240,128 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+
+    <!-- row 5 -->
+    <path d="M40,164 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M120,164 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M200,164 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M280,164 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+
+    <!-- row 6 (offset) -->
+    <path d="M80,200 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M160,200 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M240,200 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+
+    <!-- row 7 -->
+    <path d="M40,236 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M120,236 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M200,236 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M280,236 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+
+    <!-- row 8 (offset) -->
+    <path d="M80,272 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M160,272 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+    <path d="M240,272 l20,-12 l20,12 l0,24 l-20,12 l-20,-12 z"/>
+  </g>
+
+  <!-- occasional soft dots for texture -->
+  <g opacity="0.08">
+    <circle cx="30" cy="300" r="3" fill="#b38e23"/>
+    <circle cx="300" cy="26" r="3" fill="#cfa72b"/>
+    <circle cx="160" cy="160" r="3" fill="#cfa72b"/>
+  </g>
+</svg>
+

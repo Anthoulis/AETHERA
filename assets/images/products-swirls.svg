@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" aria-hidden="true" role="img">
+  <!-- Transparent tile with soft honey swirls -->
+  <defs>
+    <linearGradient id="goldStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#cfa72b"/>
+      <stop offset="100%" stop-color="#b38e23"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="480" height="320" fill="none"/>
+
+  <g fill="none" stroke="url(#goldStroke)" stroke-width="2" opacity="0.08">
+    <path d="M-20,60 C80,20 160,20 240,60 S400,100 500,60"/>
+    <path d="M-20,120 C80,80 160,80 240,120 S400,160 500,120"/>
+    <path d="M-20,180 C80,140 160,140 240,180 S400,200 500,180"/>
+    <path d="M-20,240 C80,200 160,200 240,240 S400,260 500,240"/>
+  </g>
+
+  <g opacity="0.06">
+    <circle cx="60" cy="50" r="3" fill="#cfa72b"/>
+    <circle cx="420" cy="270" r="3" fill="#b38e23"/>
+    <circle cx="240" cy="160" r="3" fill="#cfa72b"/>
+  </g>
+</svg>
+

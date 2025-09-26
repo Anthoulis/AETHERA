@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true" role="img">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#cfa72b"/>
+      <stop offset="100%" stop-color="#b38e23"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#g1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- lid -->
+    <path d="M20 14h24v6H20z"/>
+    <!-- jar body -->
+    <path d="M18 20h28v22a8 8 0 0 1-8 8H26a8 8 0 0 1-8-8V20z"/>
+    <!-- label hex -->
+    <polygon points="32,28 36,30.3 36,34.9 32,37.2 28,34.9 28,30.3"/>
+  </g>
+</svg>
+

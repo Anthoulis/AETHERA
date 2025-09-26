@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true" role="img">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#cfa72b"/>
+      <stop offset="100%" stop-color="#b38e23"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#g2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- honeycomb cluster -->
+    <polygon points="22,18 28,15 34,18 34,24 28,27 22,24"/>
+    <polygon points="34,18 40,15 46,18 46,24 40,27 34,24"/>
+    <polygon points="28,27 34,24 40,27 40,33 34,36 28,33"/>
+    <polygon points="16,27 22,24 28,27 28,33 22,36 16,33"/>
+    <polygon points="22,36 28,33 34,36 34,42 28,45 22,42"/>
+  </g>
+</svg>
+
