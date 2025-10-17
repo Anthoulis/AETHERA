@@ -88,7 +88,42 @@ p{ margin: 0 0 1rem; color: var(--fg); }
   display: flex; align-items: center; justify-content: space-between;
   min-height: 64px; gap: 1rem;
 }
-.logo{ height: 40px; width: auto; }
+.logo{ height: 44px; width: auto; }
+
+/* Brand lockup (logo + text) */
+.brand{ display:flex; align-items:center; gap:.9rem; }
+.brand-text{
+  position: relative;
+  display:flex; flex-direction:column; line-height:1.05;
+  font-family: "Cinzel", "Merriweather", Georgia, "Times New Roman", serif;
+}
+.brand-est{
+  position:absolute; right:2px; top:-.6rem;
+  font-size:.68rem; letter-spacing:.22em; opacity:.95;
+  font-style: italic; white-space: nowrap;
+}
+.brand-name{ font-size:1.32rem; letter-spacing:.16em; font-weight:800; }
+.brand-tag{ font-size:.7rem; letter-spacing:.2em; opacity:.95; }
+
+/* Gold gradient text similar to mark */
+.gold-text{
+  /* Fallback solid color so text is visible everywhere */
+  color: var(--accent);
+  text-shadow: 0 1px 0 rgba(255,255,255,.12), 0 2px 4px rgba(0,0,0,.25);
+}
+@supports (background-clip: text) or (-webkit-background-clip: text){
+  .gold-text{
+    background: linear-gradient(180deg,#f0d98a 0%,#e0c062 40%,#cfa72b 72%,#a4771a 100%);
+    -webkit-background-clip:text; background-clip:text;
+    color: transparent; -webkit-text-fill-color: transparent;
+  }
+}
+.brand-name,.brand-tag{ text-transform: uppercase; }
+
+@media (max-width: 860px){
+  .brand-name{ font-size:1.02rem; letter-spacing:.14em; }
+  .brand-est,.brand-tag{ display:none; }
+}
 
 .main-nav{ display: flex; align-items: center; gap: .75rem; }
 .main-nav a{
@@ -393,3 +428,30 @@ form.products{
   .section{ padding: 1rem; }
   a{ text-decoration: underline; }
 }
+ 
+/* ==========================================================================
+   Home: Extend values background to footer
+   ========================================================================== */
+.page-home .section.products-section,
+.page-home .cta{
+  background-image: url('../images/values-honeycomb.svg');
+  background-repeat: repeat;
+  background-size: 320px 320px;
+  background-position: center;
+}
+.page-home .section.products-section{
+  background-color: color-mix(in oklab, var(--line) 20%, transparent);
+}
+/* Blend CTA with pattern and keep contrast */
+.page-home .cta{
+  /* soften gold into the surrounding section */
+  background-color: color-mix(in oklab, var(--accent) 14%, var(--bg));
+  color: var(--fg);
+}
+.page-home .cta .btn{
+  /* use solid accent for strong CTA on lighter background */
+  background: var(--accent);
+  color: #fff;
+  border-color: transparent;
+}
+.page-home .cta .btn:hover{ background: var(--accent-600); }
