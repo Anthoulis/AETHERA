@@ -133,10 +133,9 @@ p{ margin: 0 0 1rem; color: var(--fg); }
 .main-nav a:hover{ opacity: 1; background: color-mix(in oklab, var(--line) 40%, transparent); }
 
 /* Active nav using page body classes */
+.page-home         .main-nav a[href$="index.html"],
 .page-about        .main-nav a[href$="about.html"],
 .page-products     .main-nav a[href$="products.html"],
-.page-wholesale    .main-nav a[href$="wholesale.html"],
-.page-sustainability .main-nav a[href$="sustainability.html"],
 .page-contact      .main-nav a[href$="contact.html"]{
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -168,14 +167,21 @@ p{ margin: 0 0 1rem; color: var(--fg); }
 /* ==========================================================================
    Hero
    ========================================================================== */
+/* Shared background for hero + story */
+.hero-group{
+  position: relative;
+  background: #111 url('../images/hero.jpg') no-repeat center / cover;
+  /* focal point: push image up so bottom (island) sits in hero */
+  --hero-focal-y: 10%;
+  background-position: 50% var(--hero-focal-y, 50%);
+}
+
 .hero {
   position: relative;
   color: #fff;
   text-align: center;
   padding: clamp(3rem, 6vw + 1rem, 7rem) 1rem;
-  background: #111 url('../images/hero.jpg') no-repeat center / cover;
-  --hero-focal-y: 85%;
-  background-position: 50% var(--hero-focal-y, 50%);
+  background: none; /* background now on .hero-group */
 
   isolation: isolate;
 
@@ -218,30 +224,25 @@ p{ margin: 0 0 1rem; color: var(--fg); }
    Sections / Layout blocks
    ========================================================================== */
 .section{ padding: clamp(2rem, 4vw + 1rem, 3.5rem) 1rem; }
-.section.highlight{ background: color-mix(in oklab, var(--line) 20%, transparent); }
 
-/* Values — subtle honeycomb background */
-.section.highlight.values-section{
-  /* keep existing highlight color and layer a repeating pattern */
-  background-image: url('../images/values-honeycomb.svg');
-  background-repeat: repeat;
-  background-size: 320px 320px;
-  background-position: center;
-}
+/* (Removed) Values section styles */
 
 /* Our Story — elegant background & readability */
 .section.story{
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: var(--bg) url('../images/bees-honey.svg') no-repeat center / cover;
+  /* extend hero background into this section (blurred) */
+  background: none;
 }
 .section.story::before{
+  /* local blur over the shared background; no duplication */
   content: "";
   position: absolute;
   inset: 0;
-  /* soft wash for legibility across themes */
-  background: color-mix(in oklab, var(--bg) 85%, transparent);
+  background: color-mix(in oklab, var(--bg) 30%, transparent);
+  backdrop-filter: blur(6px) saturate(1.05);
+  -webkit-backdrop-filter: blur(6px) saturate(1.05);
   z-index: 0;
 }
 .section.story .container{ position: relative; z-index: 1; }
@@ -253,48 +254,17 @@ p{ margin: 0 0 1rem; color: var(--fg); }
   background: var(--accent);
   border-radius: var(--radius-sm);
 }
-.section.story p{ max-width: 70ch; }
+.section.story p{ max-width: none; }
 
 /* Products — soft honey swirls background */
 .section.products-section{
-  background-image: url('../images/products-swirls.svg');
-  background-repeat: repeat;
-  background-size: 480px 320px;
-  background-position: center;
+  /* Minimal, elegant background that blends with the page */
+  background:
+    radial-gradient(80% 120% at 50% 0%, color-mix(in oklab, var(--line) 24%, transparent), transparent 70%),
+    linear-gradient(180deg, color-mix(in oklab, var(--line) 12%, transparent), transparent 60%);
 }
 
-/* Shared grids */
-.values{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 1.25rem;
-  text-align: center;
-}
-.values .value-card{
-  padding-top: 1.25rem;
-}
-.values .value-card:hover{
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-  border-color: color-mix(in oklab, var(--accent) 30%, var(--line));
-}
-.values .icon-badge{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 64px;
-  height: 64px;
-  border-radius: 999px;
-  margin: 0 auto .75rem;
-  background:
-    radial-gradient(60% 60% at 30% 25%, rgba(255,255,255,.8), rgba(255,255,255,0)),
-    radial-gradient(80% 80% at 70% 70%, rgba(0,0,0,.06), rgba(0,0,0,0)),
-    color-mix(in oklab, var(--accent) 38%, #fff);
-  border: 1px solid color-mix(in oklab, var(--accent) 40%, var(--line));
-}
-.values .icon-badge img{ width: 32px; height: 32px; }
-.values h3{ margin: .35rem 0 .35rem; }
-.values p{ color: var(--muted); }
+/* Product grid */
 .products{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
@@ -313,9 +283,13 @@ p{ margin: 0 0 1rem; color: var(--fg); }
 .product-card img{
   border-radius: var(--radius-sm);
   margin-bottom: .75rem;
+  height: 150px;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
 }
-.product-card h4{ margin: .25rem 0 .5rem; }
 .product-card h4{
+  margin: .25rem 0 .5rem;
   display: flex;
   align-items: center;
   gap: .5rem;
@@ -329,18 +303,54 @@ p{ margin: 0 0 1rem; color: var(--fg); }
   border-color: color-mix(in oklab, var(--accent) 30%, var(--line));
 }
 
+/* Product detail layout */
+.product-detail{
+  display: grid;
+  grid-template-columns: minmax(240px, 420px) 1fr;
+  grid-template-areas:
+    "title title"
+    "media info";
+  gap: 1.25rem;
+  align-items: start;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  box-shadow: var(--shadow-sm);
+  margin: 1rem 0;
+}
+.product-title{ grid-area: title; margin: 0; }
+.product-media{ grid-area: media; }
+.product-info{ grid-area: info; }
+.product-media img{
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+.product-info h2{ margin: 0 0 .25rem; }
+.product-info section{ margin-top: .5rem; }
+.props{ display: grid; grid-template-columns: 120px 1fr; gap: .35rem .75rem; margin: .35rem 0 0; }
+.props dt{ font-weight: 700; color: var(--muted); }
+.props dd{ margin: 0; }
+
 /* Call to Action */
 .cta{
   text-align: center;
-  background: var(--accent);
-  color: #fff;
+  /* Soft gradient that transitions into the dark footer nicely */
+  background: linear-gradient(180deg,
+              color-mix(in oklab, var(--accent) 8%, var(--bg)) 0%,
+              color-mix(in oklab, var(--brand) 12%, var(--bg)) 100%);
+  color: var(--fg);
   padding: clamp(2rem, 3.5vw + 1rem, 4rem) 1rem;
+  border-top: 1px solid color-mix(in oklab, var(--line) 40%, transparent);
 }
 .cta .btn{
-  background: #fff; color: var(--accent);
+  background: var(--accent);
+  color: #fff;
   border-color: transparent;
 }
-.cta .btn:hover{ background: #f6f6f6; }
+.cta .btn:hover{ background: var(--accent-600); }
 
 /* ==========================================================================
    Forms
@@ -391,9 +401,7 @@ form.products{
 .page-products .product-card h4{ letter-spacing: .2px; }
 .page-products .products{ gap: 1.5rem; }
 
-.page-wholesale .values{ margin-top: .75rem; }
-
-.page-sustainability ul{ max-width: 60ch; }
+/* page-contact tweaks */
 
 .page-contact form .input, 
 .page-contact form textarea{ background: #fff; }
@@ -408,16 +416,19 @@ form.products{
   .container{ max-width: calc(var(--container) + 40px); }
 }
 @media (max-width: 1024px){
-  .hero{ --hero-focal-y: 92%; }
+  .hero-group{ --hero-focal-y: 10%; }
 }
 @media (max-width: 860px){
   .main-nav{ gap: .5rem; }
   .main-nav a{ padding: .4rem .55rem; }
   .logo{ height: 36px; }
+  .product-detail{ grid-template-columns: 1fr; grid-template-areas: "title" "media" "info"; }
+  .product-media img{ height: 220px; }
 }
 @media (max-width: 640px){
   .hero-content h1{ font-size: 1.9rem; }
-  .hero{ text-align: left; --hero-focal-y: 98%; }
+  .hero{ text-align: left; }
+  .hero-group{ --hero-focal-y: 10%; }
 }
 
 /* ==========================================================================
@@ -429,29 +440,4 @@ form.products{
   a{ text-decoration: underline; }
 }
  
-/* ==========================================================================
-   Home: Extend values background to footer
-   ========================================================================== */
-.page-home .section.products-section,
-.page-home .cta{
-  background-image: url('../images/values-honeycomb.svg');
-  background-repeat: repeat;
-  background-size: 320px 320px;
-  background-position: center;
-}
-.page-home .section.products-section{
-  background-color: color-mix(in oklab, var(--line) 20%, transparent);
-}
-/* Blend CTA with pattern and keep contrast */
-.page-home .cta{
-  /* soften gold into the surrounding section */
-  background-color: color-mix(in oklab, var(--accent) 14%, var(--bg));
-  color: var(--fg);
-}
-.page-home .cta .btn{
-  /* use solid accent for strong CTA on lighter background */
-  background: var(--accent);
-  color: #fff;
-  border-color: transparent;
-}
-.page-home .cta .btn:hover{ background: var(--accent-600); }
+/* (Removed) Values background extension on home */

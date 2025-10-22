@@ -22,8 +22,6 @@ aethera-website/
 ├── index.html             # Home
 ├── about.html             # About page
 ├── products.html          # Products overview
-├── wholesale.html         # Wholesale info
-├── sustainability.html    # Sustainability page
 ├── contact.html           # Contact page
 │
 ├── legal/
@@ -71,3 +69,4 @@ aethera-website/
 
 ## 📜 License
 All rights reserved © 2025 AETHERA.
+
