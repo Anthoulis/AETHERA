@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Products â€” AETHERA</title>
+  <title>Products | AETHERA</title>
   <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body class="page-products">
@@ -12,43 +12,56 @@
       <a href="index.html" class="brand" aria-label="AETHERA - Greek Premium Products (home)">
         <img src="assets/icons/logo.svg" alt="AETHERA Logo" class="logo">
         <div class="brand-text">
-          <svg class="brand-est gold-text" width="120" height="20" viewBox="0 0 120 20" aria-hidden="true" focusable="false"><defs><path id="est-curve" d="M10,18 A50,50 0 0 1 110,18"/></defs><text style="font-size:11px; font-style:italic; letter-spacing:2px;" text-anchor="middle"><textPath href="#est-curve" startOffset="50%" style="fill: currentColor">· est 1934 ·</textPath></text></svg>
+          <svg class="brand-est gold-text" width="120" height="20" viewBox="0 0 120 20" aria-hidden="true" focusable="false"><defs><path id="est-curve" d="M10,18 A50,50 0 0 1 110,18"/></defs><text style="font-size:11px; font-style:italic; letter-spacing:2px;" text-anchor="middle"><textPath href="#est-curve" startOffset="50%" style="fill: currentColor">A� est 1934 A�</textPath></text></svg>
           <div class="brand-name gold-text">AETHERA</div>
-          <div class="brand-tag gold-text">GREEK PREMIUM PRODUCTS</div>
+          <div class="brand-tag gold-text" data-i18n="brand-tag">GREEK PREMIUM PRODUCTS</div>
         </div>
       </a>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="products.html">Products</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <div class="header-actions">
+        <nav class="main-nav">
+          <a href="index.html" data-i18n="nav-home">Home</a>
+          <a href="about.html" data-i18n="nav-about">About</a>
+          <a href="products.html" data-i18n="nav-products">Products</a>
+          <a href="contact.html" data-i18n="nav-contact">Contact</a>
+        </nav>
+        <div class="lang-dropdown">
+          <button class="lang-toggle" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-flag" aria-hidden="true">EN</span>
+            <span class="lang-label">English</span>
+          </button>
+          <div class="lang-menu" role="listbox">
+            <button role="option" data-lang="en" data-flag="EN"><span class="lang-flag">EN</span> English</button>
+            <button role="option" data-lang="de" data-flag="DE"><span class="lang-flag">DE</span> Deutsch</button>
+            <button role="option" data-lang="el" data-flag="EL"><span class="lang-flag">EL</span> Ελληνικά</button>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
   <section class="section">
     <div class="container">
-      <h1>Our Products</h1>
-      <p class="lead">We’ll expand this page soon with full details.</p>
+      <h1 data-i18n="products-page-title">Our Products</h1>
+      <p class="lead" data-i18n="products-page-lead">We'll expand this page soon with full details.</p>
 
       <!-- Product: Thyme Honey -->
       <article class="product-detail">
-        <h2 class="product-title">Thyme Honey</h2>
+        <h2 class="product-title" data-i18n="product-thyme-title">Thyme Honey</h2>
         <div class="product-media">
           <img src="assets/images/placeholder-thyme-honey.svg" alt="Thyme Honey (placeholder)">
         </div>
         <div class="product-info">
           <section>
-            <h3>Description</h3>
-            <p>Floral and bright honey gathered from wild thyme blossoms on Kos Island. Raw, unfiltered and cold-extracted to preserve enzymes and the distinctive Aegean aroma.</p>
+            <h3 data-i18n="product-description-heading">Description</h3>
+            <p data-i18n="product-thyme-desc">Floral and bright honey gathered from wild thyme blossoms on Kos Island. Raw, unfiltered and cold-extracted to preserve enzymes and the distinctive Aegean aroma.</p>
           </section>
           <section>
-            <h3>Details</h3>
+            <h3 data-i18n="product-details-heading">Details</h3>
             <dl class="props">
-              <div><dt>Origin</dt><dd>Kos Island, Greece</dd></div>
-              <div><dt>Type</dt><dd>Monofloral thyme honey (raw, unfiltered)</dd></div>
-              <div><dt>Available</dt><dd>280g / 450g / 900g</dd></div>
-              <div><dt>Packaging</dt><dd>Glass jar with tamper‑evident lid; cases of 12</dd></div>
+              <div><dt data-i18n="details-origin-label">Origin</dt><dd data-i18n="product-thyme-origin">Kos Island, Greece</dd></div>
+              <div><dt data-i18n="details-type-label">Type</dt><dd data-i18n="product-thyme-type">Monofloral thyme honey (raw, unfiltered)</dd></div>
+              <div><dt data-i18n="details-available-label">Available</dt><dd data-i18n="product-thyme-available">280g / 450g / 900g</dd></div>
+              <div><dt data-i18n="details-packaging-label">Packaging</dt><dd data-i18n="product-thyme-packaging">Glass jar with tamper-evident lid; cases of 12</dd></div>
             </dl>
           </section>
         </div>
@@ -56,22 +69,22 @@
 
       <!-- Product: Extra Virgin Olive Oil -->
       <article class="product-detail">
-        <h2 class="product-title">Extra Virgin Olive Oil</h2>
+        <h2 class="product-title" data-i18n="product-olive-title">Extra Virgin Olive Oil</h2>
         <div class="product-media">
           <img src="assets/images/placeholder-olive-oil.svg" alt="Extra Virgin Olive Oil (placeholder)">
         </div>
         <div class="product-info">
           <section>
-            <h3>Description</h3>
-            <p>Cold‑pressed extra virgin olive oil from local Koroneiki olives. Vibrant green fruit on the nose, balanced bitterness, and a peppery finish — ideal for salads and finishing.</p>
+            <h3 data-i18n="product-description-heading">Description</h3>
+            <p data-i18n="product-olive-desc">Cold-pressed extra virgin olive oil from local Koroneiki olives. Vibrant green fruit on the nose, balanced bitterness, and a peppery finish — ideal for salads and finishing.</p>
           </section>
           <section>
-            <h3>Details</h3>
+            <h3 data-i18n="product-details-heading">Details</h3>
             <dl class="props">
-              <div><dt>Origin</dt><dd>Kos Island, Greece</dd></div>
-              <div><dt>Type</dt><dd>Extra Virgin, cold‑pressed (Koroneiki)</dd></div>
-              <div><dt>Available</dt><dd>500ml / 750ml / 1L</dd></div>
-              <div><dt>Packaging</dt><dd>Dark glass bottle, tamper‑evident cap; cases of 6 / 12</dd></div>
+              <div><dt data-i18n="details-origin-label">Origin</dt><dd data-i18n="product-olive-origin">Kos Island, Greece</dd></div>
+              <div><dt data-i18n="details-type-label">Type</dt><dd data-i18n="product-olive-type">Extra Virgin, cold-pressed (Koroneiki)</dd></div>
+              <div><dt data-i18n="details-available-label">Available</dt><dd data-i18n="product-olive-available">500ml / 750ml / 1L</dd></div>
+              <div><dt data-i18n="details-packaging-label">Packaging</dt><dd data-i18n="product-olive-packaging">Dark glass bottle, tamper-evident cap; cases of 6 / 12</dd></div>
             </dl>
           </section>
         </div>
@@ -81,23 +94,21 @@
 
   <section class="cta">
     <div class="container">
-      <h2>Trade & Partnerships</h2>
-      <p>Contact us for collaborations, bulk orders, or private label.</p>
-      <a href="contact.html" class="btn">Contact Us</a>
+      <h2 data-i18n="cta-trade-title">Trade &amp; Partnerships</h2>
+      <p data-i18n="cta-trade-text">Contact us for collaborations, bulk orders, or private label.</p>
+      <a href="contact.html" class="btn" data-i18n="cta-cta">Contact Us</a>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 AETHERA. All rights reserved.</p>
+      <p data-i18n="footer-copy">&copy; 2025 AETHERA. All rights reserved.</p>
       <nav class="footer-nav">
-        <a href="legal/privacy.html">Privacy Policy</a>
-        <a href="legal/terms.html">Terms &amp; Conditions</a>
+        <a href="legal/privacy.html" data-i18n="footer-privacy">Privacy Policy</a>
+        <a href="legal/terms.html" data-i18n="footer-terms">Terms &amp; Conditions</a>
       </nav>
     </div>
   </footer>
+  <script src="assets/js/lang.js"></script>
 </body>
 </html>
-
-
-

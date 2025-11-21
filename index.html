@@ -13,12 +13,25 @@
       <a href="index.html" class="brand">
         <img src="assets/icons/logo.svg" alt="AETHERA Logo" class="logo">
       </a>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="products.html">Products</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <div class="header-actions">
+        <nav class="main-nav">
+          <a href="index.html" data-i18n="nav-home">Home</a>
+          <a href="about.html" data-i18n="nav-about">About</a>
+          <a href="products.html" data-i18n="nav-products">Products</a>
+          <a href="contact.html" data-i18n="nav-contact">Contact</a>
+        </nav>
+        <div class="lang-dropdown">
+          <button class="lang-toggle" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-flag" aria-hidden="true">EN</span>
+            <span class="lang-label">English</span>
+          </button>
+          <div class="lang-menu" role="listbox">
+            <button role="option" data-lang="en" data-flag="EN"><span class="lang-flag">EN</span> English</button>
+            <button role="option" data-lang="de" data-flag="DE"><span class="lang-flag">DE</span> Deutsch</button>
+            <button role="option" data-lang="el" data-flag="EL"><span class="lang-flag">EL</span> Ελληνικά</button>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -28,17 +41,17 @@
   <section class="hero">
     <div class="hero-content">
       <h1>AETHERA</h1>
-      <h2>Greek Premium Products</h2>
-      <h3>Pure. Timeless. Greek.</h3>
-      <a href="products.html" class="btn">Explore Products</a>
+      <h2 data-i18n="hero-subtitle">Greek Premium Products</h2>
+      <h3 data-i18n="hero-tagline">Pure. Timeless. Greek.</h3>
+      <a href="products.html" class="btn" data-i18n="hero-cta">Explore Products</a>
     </div>
   </section>
 
   <!-- Our Story -->
   <section class="section story">
     <div class="container">
-      <h2>Our Story</h2>
-      <p class="lead">
+      <h2 data-i18n="story-title">Our Story</h2>
+      <p class="lead" data-i18n="story-body">
         Rooted in the sun-drenched lands and islands of Greece, our journey began with a simple vision - to share the purest treasures of our homeland with the world. From the golden honey gathered from wild thyme and mountain blossoms, to the extra virgin olive oil pressed from centuries-old olive trees, every product we offer carries the essence of Greece's rich nature and timeless tradition. We work hand in hand with local producers and family-owned farms, ensuring that every drop and every spoonful reflects authenticity, quality, and care. Our mission is to connect people across the globe with genuine Greek flavors - honest, natural, and unforgettable. From the Aegean islands to the olive groves of the Peloponnese, we bring you the taste of Greece - crafted with passion, rooted in purity.
       </p>
     </div>
@@ -49,23 +62,23 @@
   <!-- Products -->
   <section class="section products-section">
     <div class="container">
-      <h2>Featured Products</h2>
+      <h2 data-i18n="products-title">Featured Products</h2>
       <div class="products">
         <div class="product-card">
           <img src="assets/images/featured-honey-real.svg" alt="Honey-based Products" width="960" height="640">
           <h4>
             <img class="product-icon" src="assets/icons/product-jar.svg" alt="Jar icon">
-            Premium Greek Honey
+            <span data-i18n="product1-title">Premium Greek Honey</span>
           </h4>
-          <p>Pure Greek honey, curated for gourmet and export selection.</p>
+          <p data-i18n="product1-desc">Pure Greek honey, curated for gourmet and export selection.</p>
         </div>
         <div class="product-card">
           <img src="assets/images/featured-olive-real.svg" alt="Extra Virgin Olive Oil Products" width="960" height="640">
           <h4>
             <img class="product-icon" src="assets/icons/product-olive.svg" alt="Olive icon">
-            Premium Extra Virgin Olive Oil
+            <span data-i18n="product2-title">Premium Extra Virgin Olive Oil</span>
           </h4>
-          <p>Exceptional quality, crafted for fine international markets.</p>
+          <p data-i18n="product2-desc">Exceptional quality, crafted for fine international markets.</p>
         </div>
       </div>
     </div>
@@ -74,21 +87,22 @@
   <!-- Contact CTA -->
   <section class="cta">
     <div class="container">
-      <h2>Partnerships</h2>
-      <p>Bring AETHERA products to your customers worldwide.</p>
-      <a href="contact.html" class="btn">Contact Us</a>
+      <h2 data-i18n="cta-title">Partnerships</h2>
+      <p data-i18n="cta-text">Bring AETHERA products to your customers worldwide.</p>
+      <a href="contact.html" class="btn" data-i18n="cta-cta">Contact Us</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 AETHERA. All rights reserved.</p>
+      <p data-i18n="footer-copy">&copy; 2025 AETHERA. All rights reserved.</p>
       <nav class="footer-nav">
-        <a href="legal/privacy.html">Privacy Policy</a>
-        <a href="legal/terms.html">Terms & Conditions</a>
+        <a href="legal/privacy.html" data-i18n="footer-privacy">Privacy Policy</a>
+        <a href="legal/terms.html" data-i18n="footer-terms">Terms & Conditions</a>
       </nav>
     </div>
   </footer>
+  <script src="assets/js/lang.js"></script>
 </body>
 </html>

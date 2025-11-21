@@ -3,55 +3,67 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Terms &amp; Conditions â€” AETHERA</title>
+  <title>Terms &amp; Conditions | AETHERA</title>
   <link rel="stylesheet" href="../assets/css/style.css"/>
 </head>
-<body>
+<body class="page-legal page-terms">
   <header class="site-header">
     <div class="container">
       <a href="../index.html" class="brand" aria-label="AETHERA - Greek Premium Products (home)">
         <img src="../assets/icons/logo.svg" alt="AETHERA Logo" class="logo">
         <div class="brand-text">
-          <svg class="brand-est gold-text" width="120" height="20" viewBox="0 0 120 20" aria-hidden="true" focusable="false"><defs><path id="est-curve" d="M10,18 A50,50 0 0 1 110,18"/></defs><text style="font-size:11px; font-style:italic; letter-spacing:2px;" text-anchor="middle"><textPath href="#est-curve" startOffset="50%" style="fill: currentColor">· est 1934 ·</textPath></text></svg>
+          <svg class="brand-est gold-text" width="120" height="20" viewBox="0 0 120 20" aria-hidden="true" focusable="false"><defs><path id="est-curve" d="M10,18 A50,50 0 0 1 110,18"/></defs><text style="font-size:11px; font-style:italic; letter-spacing:2px;" text-anchor="middle"><textPath href="#est-curve" startOffset="50%" style="fill: currentColor">A� est 1934 A�</textPath></text></svg>
           <div class="brand-name gold-text">AETHERA</div>
-          <div class="brand-tag gold-text">GREEK PREMIUM PRODUCTS</div>
+          <div class="brand-tag gold-text" data-i18n="brand-tag">GREEK PREMIUM PRODUCTS</div>
         </div>
       </a>
-      <nav class="main-nav">
-        <a href="../index.html">Home</a>
-        <a href="../about.html">About</a>
-        <a href="../products.html">Products</a>
-        <a href="../contact.html">Contact</a>
-      </nav>
+      <div class="header-actions">
+        <nav class="main-nav">
+          <a href="../index.html" data-i18n="nav-home">Home</a>
+          <a href="../about.html" data-i18n="nav-about">About</a>
+          <a href="../products.html" data-i18n="nav-products">Products</a>
+          <a href="../contact.html" data-i18n="nav-contact">Contact</a>
+        </nav>
+        <div class="lang-dropdown">
+          <button class="lang-toggle" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-flag" aria-hidden="true">EN</span>
+            <span class="lang-label">English</span>
+          </button>
+          <div class="lang-menu" role="listbox">
+            <button role="option" data-lang="en" data-flag="EN"><span class="lang-flag">EN</span> English</button>
+            <button role="option" data-lang="de" data-flag="DE"><span class="lang-flag">DE</span> Deutsch</button>
+            <button role="option" data-lang="el" data-flag="EL"><span class="lang-flag">EL</span> Ελληνικά</button>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
   <section class="section">
     <div class="container">
-      <h1>Terms &amp; Conditions</h1>
-      <p>Using this website implies acceptance of the terms below. Replace with your final legal text.</p>
+      <h1 data-i18n="terms-title">Terms &amp; Conditions</h1>
+      <p data-i18n="terms-intro">Using this website implies acceptance of the terms below. Replace with your final legal text.</p>
 
-      <h2>Use of Content</h2>
-      <p>All content is owned by AETHERA unless otherwise stated. You may not copy, modify, or redistribute without permission.</p>
+      <h2 data-i18n="terms-use-title">Use of Content</h2>
+      <p data-i18n="terms-use-text">All content is owned by AETHERA unless otherwise stated. You may not copy, modify, or redistribute without permission.</p>
 
-      <h2>Liability</h2>
-      <p>Information is provided â€œas isâ€ without warranties. We are not liable for any indirect or consequential damages.</p>
+      <h2 data-i18n="terms-liability-title">Liability</h2>
+      <p data-i18n="terms-liability-text">Information is provided "as is" without warranties. We are not liable for any indirect or consequential damages.</p>
 
-      <h2>Contact</h2>
-      <p>For questions about these terms, email <a href="mailto:hello@aethera.gr">hello@aethera.gr</a>.</p>
+      <h2 data-i18n="terms-contact-title">Contact</h2>
+      <p data-i18n="terms-contact-text">For questions about these terms, email <a href="mailto:hello@aethera.gr">hello@aethera.gr</a>.</p>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 AETHERA. All rights reserved.</p>
+      <p data-i18n="footer-copy">&copy; 2025 AETHERA. All rights reserved.</p>
       <nav class="footer-nav">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="privacy.html" data-i18n="footer-privacy">Privacy Policy</a>
+        <a href="terms.html" data-i18n="footer-terms">Terms &amp; Conditions</a>
       </nav>
     </div>
   </footer>
+  <script src="../assets/js/lang.js"></script>
 </body>
 </html>
-
-

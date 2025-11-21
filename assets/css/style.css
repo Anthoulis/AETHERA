@@ -1,28 +1,27 @@
-/* ==========================================================================
-   AETHERA — Global Styles (refactor)
-   Single file for all pages. Keep it lean, scalable, and fast.
-   ========================================================================== */
+/* AETHERA | Global stylesheet */
 
-/* Reset / Normalize-ish */
+/* ------------------------------------------------------------
+   Reset / base
+------------------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; }
-html:focus-within { scroll-behavior: smooth; }
 html, body { height: 100%; }
 body { margin: 0; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
 img, picture, video, canvas, svg { display: block; max-width: 100%; }
 input, button, textarea, select { font: inherit; }
 a { color: inherit; text-decoration: none; }
 ul[role="list"], ol[role="list"] { list-style: none; padding: 0; margin: 0; }
+html:focus-within { scroll-behavior: smooth; }
 
-/* ==========================================================================
-   Design Tokens
-   ========================================================================== */
+/* ------------------------------------------------------------
+   Theme tokens
+------------------------------------------------------------- */
 :root{
   --bg: #ffffff;
   --fg: #1a1a1a;
-  --muted: #6b7280;       /* gray-500 */
-  --line: #e5e7eb;        /* gray-200 */
+  --muted: #6b7280;
+  --line: #e5e7eb;
   --brand: #111111;
-  --accent: #cfa72b;      /* AETHERA gold */
+  --accent: #cfa72b;
   --accent-600: #b38e23;
 
   --radius-sm: 6px;
@@ -47,9 +46,9 @@ ul[role="list"], ol[role="list"] { list-style: none; padding: 0; margin: 0; }
   }
 }
 
-/* ==========================================================================
-   Base
-   ========================================================================== */
+/* ------------------------------------------------------------
+   Typography / layout helpers
+------------------------------------------------------------- */
 body{
   background: var(--bg);
   color: var(--fg);
@@ -69,32 +68,38 @@ h3{ font-size: 1.125rem; }
 p{ margin: 0 0 1rem; color: var(--fg); }
 .lead{ color: var(--muted); font-size: 1.05rem; }
 
-/* Utilities */
+/* Utility classes */
 .center{ text-align: center; }
 .muted{ color: var(--muted); }
 .mt-1{ margin-top: .25rem; } .mt-2{ margin-top: .5rem; } .mt-4{ margin-top: 1rem; } .mt-8{ margin-top: 2rem; }
 .mb-4{ margin-bottom: 1rem; } .mb-6{ margin-bottom: 1.5rem; } .mb-8{ margin-bottom: 2rem; }
 
-/* ==========================================================================
-   Header / Nav
-   ========================================================================== */
+/* ------------------------------------------------------------
+   Header / navigation
+------------------------------------------------------------- */
 .site-header{
-  position: sticky; top: 0; z-index: 50;
-  background: color-mix(in oklab, var(--bg) 88%, transparent);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in oklab, var(--brand) 80%, transparent);
   backdrop-filter: saturate(1.1) blur(8px);
   border-bottom: 1px solid var(--line);
+  color: #fff;
 }
 .site-header .container{
-  display: flex; align-items: center; justify-content: space-between;
-  min-height: 64px; gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  gap: 1rem;
 }
 .logo{ height: 44px; width: auto; }
-
-/* Brand lockup (logo + text) */
 .brand{ display:flex; align-items:center; gap:.9rem; }
 .brand-text{
   position: relative;
-  display:flex; flex-direction:column; line-height:1.05;
+  display:flex;
+  flex-direction:column;
+  line-height:1.05;
   font-family: "Cinzel", "Merriweather", Georgia, "Times New Roman", serif;
 }
 .brand-est{
@@ -102,12 +107,9 @@ p{ margin: 0 0 1rem; color: var(--fg); }
   font-size:.68rem; letter-spacing:.22em; opacity:.95;
   font-style: italic; white-space: nowrap;
 }
-.brand-name{ font-size:1.32rem; letter-spacing:.16em; font-weight:800; }
-.brand-tag{ font-size:.7rem; letter-spacing:.2em; opacity:.95; }
-
-/* Gold gradient text similar to mark */
+.brand-name{ font-size:1.32rem; letter-spacing:.16em; font-weight:800; text-transform: uppercase; }
+.brand-tag{ font-size:.7rem; letter-spacing:.2em; opacity:.95; text-transform: uppercase; }
 .gold-text{
-  /* Fallback solid color so text is visible everywhere */
   color: var(--accent);
   text-shadow: 0 1px 0 rgba(255,255,255,.12), 0 2px 4px rgba(0,0,0,.25);
 }
@@ -118,7 +120,6 @@ p{ margin: 0 0 1rem; color: var(--fg); }
     color: transparent; -webkit-text-fill-color: transparent;
   }
 }
-.brand-name,.brand-tag{ text-transform: uppercase; }
 
 @media (max-width: 860px){
   .brand-name{ font-size:1.02rem; letter-spacing:.14em; }
@@ -127,23 +128,38 @@ p{ margin: 0 0 1rem; color: var(--fg); }
 
 .main-nav{ display: flex; align-items: center; gap: .75rem; }
 .main-nav a{
-  padding: .45rem .7rem; border-radius: var(--radius-sm);
-  color: var(--fg); opacity: .9;
+  padding: .45rem .7rem;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  opacity: .9;
 }
-.main-nav a:hover{ opacity: 1; background: color-mix(in oklab, var(--line) 40%, transparent); }
-
-/* Active nav using page body classes */
-.page-home         .main-nav a[href$="index.html"],
-.page-about        .main-nav a[href$="about.html"],
-.page-products     .main-nav a[href$="products.html"],
-.page-contact      .main-nav a[href$="contact.html"]{
+.main-nav a:hover{
+  opacity: 1;
+  background: rgba(255,255,255,0.12);
+}
+.header-actions{
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+@media (max-width: 720px){
+  .header-actions{
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+/* Active link driven by body page classes */
+.page-home     .main-nav a[href$="index.html"],
+.page-about    .main-nav a[href$="about.html"],
+.page-products .main-nav a[href$="products.html"],
+.page-contact  .main-nav a[href$="contact.html"]{
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
-/* ==========================================================================
-   Buttons & Links
-   ========================================================================== */
+/* ------------------------------------------------------------
+   Buttons
+------------------------------------------------------------- */
 .btn{
   display: inline-block;
   background: var(--accent);
@@ -158,22 +174,93 @@ p{ margin: 0 0 1rem; color: var(--fg); }
 .btn:hover{ background: var(--accent-600); box-shadow: var(--shadow-md); }
 .btn:active{ transform: translateY(1px); }
 .btn.ghost{
-  background: transparent; color: var(--fg); border-color: var(--line);
+  background: transparent;
+  color: var(--fg);
+  border-color: var(--line);
 }
 .btn.ghost:hover{
   background: color-mix(in oklab, var(--line) 45%, transparent);
 }
 
-/* ==========================================================================
-   Hero
-   ========================================================================== */
-/* Shared background for hero + story */
+/* Language dropdown */
+.lang-dropdown{
+  position: relative;
+  display: inline-block;
+}
+.lang-toggle{
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .38rem .62rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid color-mix(in oklab, var(--accent) 55%, var(--brand));
+  background: color-mix(in oklab, var(--brand) 88%, var(--accent) 12%);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 6px 14px color-mix(in srgb, var(--brand) 18%, transparent);
+}
+.lang-menu{
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: auto;
+  width: max-content;
+  margin-top: 4px;
+  padding: 4px;
+  border: 1px solid color-mix(in oklab, var(--accent) 45%, var(--brand));
+  border-radius: var(--radius-md);
+  background: color-mix(in oklab, var(--brand) 90%, var(--accent) 10%);
+  box-shadow: 0 14px 30px color-mix(in srgb, var(--brand) 26%, transparent);
+  display: none;
+  z-index: 30;
+}
+.lang-menu button{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  text-align: left;
+  padding: .4rem .65rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  color: #f4f4f4;
+}
+.lang-menu button:hover,
+.lang-menu button.active{
+  background: color-mix(in oklab, var(--accent) 28%, var(--brand));
+  color: #fff;
+}
+.lang-dropdown.open .lang-menu{
+  display: block;
+}
+.lang-flag{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .78em;
+  font-weight: 700;
+  letter-spacing: .02em;
+  min-width: 2em;
+  padding: .12rem .4rem;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: color-mix(in oklab, var(--accent) 90%, #fff);
+  border: 1px solid color-mix(in oklab, var(--accent) 70%, #fff);
+}
+
+/* ------------------------------------------------------------
+   Hero + story shared background
+------------------------------------------------------------- */
 .hero-group{
   position: relative;
-  background: #111 url('../images/hero.jpg') no-repeat center / cover;
-  /* focal point: push image up so bottom (island) sits in hero */
-  --hero-focal-y: 10%;
-  background-position: 50% var(--hero-focal-y, 50%);
+  background-color: #111;
+  background-image: url('../images/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Anchor to bottom so land stays visible; sky can crop on smaller viewports */
+  background-position: center bottom !important;
 }
 
 .hero {
@@ -181,62 +268,52 @@ p{ margin: 0 0 1rem; color: var(--fg); }
   color: #fff;
   text-align: center;
   padding: clamp(3rem, 6vw + 1rem, 7rem) 1rem;
-  background: none; /* background now on .hero-group */
-
+  background: none; /* actual background sits on .hero-group */
   isolation: isolate;
-
-  /* new lines for full hero effect */
-  min-height: 100vh;            /* full viewport height */
+  min-height: 100vh;
   display: flex;
-  align-items: center;          /* vertical centering */
-  justify-content: center;      /* horizontal centering */
+  align-items: center;
+  justify-content: center;
 }
-
-.hero::after {
-  /* subtle overlay for legibility */
+.hero::after{
+  /* Dark overlay improves text legibility on photo */
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55));
   z-index: 0;
 }
-
-.hero-content {
+.hero-content{
   position: relative;
   z-index: 1;
   max-width: 820px;
   margin: 0 auto;
 }
-
-.hero-content h1 {
+.hero-content h1{
   margin-bottom: .75rem;
-  font-size: clamp(2rem, 5vw, 3.5rem); /* responsive font */
+  font-size: clamp(2rem, 5vw, 3.5rem);
 }
-
-.hero-content p {
+.hero-content p{
   margin-bottom: 1.25rem;
   color: #f3f4f6;
   font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
-
-/* ==========================================================================
-   Sections / Layout blocks
-   ========================================================================== */
+/* ------------------------------------------------------------
+   Sections
+------------------------------------------------------------- */
 .section{ padding: clamp(2rem, 4vw + 1rem, 3.5rem) 1rem; }
 
-/* (Removed) Values section styles */
-
-/* Our Story — elegant background & readability */
 .section.story{
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  /* extend hero background into this section (blurred) */
   background: none;
+  /* Slightly tighter so less of the shared photo shows here */
+  padding: clamp(1.5rem, 3vw + .5rem, 2.75rem) 1rem;
 }
 .section.story::before{
-  /* local blur over the shared background; no duplication */
+  /* Local blur to soften the shared background behind text */
   content: "";
   position: absolute;
   inset: 0;
@@ -249,29 +326,28 @@ p{ margin: 0 0 1rem; color: var(--fg); }
 .section.story h2::after{
   content: "";
   display: block;
-  width: 68px; height: 3px;
+  width: 68px;
+  height: 3px;
   margin-top: .5rem;
   background: var(--accent);
   border-radius: var(--radius-sm);
 }
-.section.story p{ max-width: none; }
+.section.story p{
+  max-width: none;
+  color: #fff; /* ensure strong contrast on the photo backdrop */
+}
 
-/* Products — soft honey swirls background */
+/* Products grid */
 .section.products-section{
-  /* Minimal, elegant background that blends with the page */
   background:
     radial-gradient(80% 120% at 50% 0%, color-mix(in oklab, var(--line) 24%, transparent), transparent 70%),
     linear-gradient(180deg, color-mix(in oklab, var(--line) 12%, transparent), transparent 60%);
 }
-
-/* Product grid */
 .products{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
   gap: 1.25rem;
 }
-
-/* Cards / Product tiles */
 .card, .product-card{
   background: var(--bg);
   border: 1px solid var(--line);
@@ -294,9 +370,7 @@ p{ margin: 0 0 1rem; color: var(--fg); }
   align-items: center;
   gap: .5rem;
 }
-.product-card .product-icon{
-  width: 22px; height: 22px;
-}
+.product-card .product-icon{ width: 22px; height: 22px; }
 .product-card:hover{
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
@@ -330,14 +404,20 @@ p{ margin: 0 0 1rem; color: var(--fg); }
 }
 .product-info h2{ margin: 0 0 .25rem; }
 .product-info section{ margin-top: .5rem; }
-.props{ display: grid; grid-template-columns: 120px 1fr; gap: .35rem .75rem; margin: .35rem 0 0; }
+.props{
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: .35rem .75rem;
+  margin: .35rem 0 0;
+}
 .props dt{ font-weight: 700; color: var(--muted); }
 .props dd{ margin: 0; }
 
-/* Call to Action */
+/* ------------------------------------------------------------
+   Call-to-action
+------------------------------------------------------------- */
 .cta{
   text-align: center;
-  /* Soft gradient that transitions into the dark footer nicely */
   background: linear-gradient(180deg,
               color-mix(in oklab, var(--accent) 8%, var(--bg)) 0%,
               color-mix(in oklab, var(--brand) 12%, var(--bg)) 100%);
@@ -352,9 +432,9 @@ p{ margin: 0 0 1rem; color: var(--fg); }
 }
 .cta .btn:hover{ background: var(--accent-600); }
 
-/* ==========================================================================
+/* ------------------------------------------------------------
    Forms
-   ========================================================================== */
+------------------------------------------------------------- */
 .input, textarea, input[type="email"], input[type="text"]{
   width: 100%;
   background: #fff;
@@ -370,18 +450,12 @@ p{ margin: 0 0 1rem; color: var(--fg); }
   box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 20%, transparent);
 }
 label{ display:block; font-weight: 600; margin: .3rem 0 .35rem; }
+form.products{ grid-template-columns: 1fr 1fr; }
+@media (max-width: 720px){ form.products{ grid-template-columns: 1fr; } }
 
-/* Use the .products grid as a simple form grid when desired */
-form.products{
-  grid-template-columns: 1fr 1fr;
-}
-@media (max-width: 720px){
-  form.products{ grid-template-columns: 1fr; }
-}
-
-/* ==========================================================================
+/* ------------------------------------------------------------
    Footer
-   ========================================================================== */
+------------------------------------------------------------- */
 .site-footer{
   background: var(--brand);
   color: #fff;
@@ -393,51 +467,51 @@ form.products{
 .footer-nav a{ color: #fff; opacity: .9; }
 .footer-nav a:hover{ opacity: 1; text-decoration: underline; }
 
-/* ==========================================================================
-   Page-specific minor tweaks (via body classes)
-   ========================================================================== */
+/* ------------------------------------------------------------
+   Page-specific tweaks
+------------------------------------------------------------- */
 .page-home .hero{ min-height: 55vh; }
-
 .page-products .product-card h4{ letter-spacing: .2px; }
 .page-products .products{ gap: 1.5rem; }
-
-/* page-contact tweaks */
-
-.page-contact form .input, 
+.page-contact form .input,
 .page-contact form textarea{ background: #fff; }
-
 .page-legal h1{ margin-bottom: .5rem; }
 .page-privacy p, .page-terms p{ color: var(--muted); }
 
-/* ==========================================================================
+/* ------------------------------------------------------------
    Responsive refinements
-   ========================================================================== */
+------------------------------------------------------------- */
 @media (min-width: 1200px){
   .container{ max-width: calc(var(--container) + 40px); }
 }
 @media (max-width: 1024px){
-  .hero-group{ --hero-focal-y: 10%; }
+  .hero-group{
+    background-position: center bottom !important;
+  }
 }
 @media (max-width: 860px){
   .main-nav{ gap: .5rem; }
   .main-nav a{ padding: .4rem .55rem; }
   .logo{ height: 36px; }
-  .product-detail{ grid-template-columns: 1fr; grid-template-areas: "title" "media" "info"; }
+  .product-detail{
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "media" "info";
+  }
   .product-media img{ height: 220px; }
 }
 @media (max-width: 640px){
   .hero-content h1{ font-size: 1.9rem; }
   .hero{ text-align: left; }
-  .hero-group{ --hero-focal-y: 10%; }
+  .hero-group{
+    background-position: center bottom !important;
+  }
 }
 
-/* ==========================================================================
-   Print (basic)
-   ========================================================================== */
+/* ------------------------------------------------------------
+   Print
+------------------------------------------------------------- */
 @media print{
   .site-header, .site-footer, .hero, .cta { display: none !important; }
   .section{ padding: 1rem; }
   a{ text-decoration: underline; }
 }
- 
-/* (Removed) Values background extension on home */
