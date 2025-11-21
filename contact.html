@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | AETHERA</title>
+  <title>Wholesale Enquiries | AETHERA</title>
   <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body class="page-contact">
@@ -12,7 +12,7 @@
       <a href="index.html" class="brand" aria-label="AETHERA - Greek Premium Products (home)">
         <img src="assets/icons/logo.svg" alt="AETHERA Logo" class="logo">
         <div class="brand-text">
-          <svg class="brand-est gold-text" width="120" height="20" viewBox="0 0 120 20" aria-hidden="true" focusable="false"><defs><path id="est-curve" d="M10,18 A50,50 0 0 1 110,18"/></defs><text style="font-size:11px; font-style:italic; letter-spacing:2px;" text-anchor="middle"><textPath href="#est-curve" startOffset="50%" style="fill: currentColor">A� est 1934 A�</textPath></text></svg>
+          <svg class="brand-est gold-text" width="120" height="20" viewBox="0 0 120 20" aria-hidden="true" focusable="false"><defs><path id="est-curve" d="M10,18 A50,50 0 0 1 110,18"/></defs><text style="font-size:11px; font-style:italic; letter-spacing:2px;" text-anchor="middle"><textPath href="#est-curve" startOffset="50%" style="fill: currentColor">AETHERA est 1934</textPath></text></svg>
           <div class="brand-name gold-text">AETHERA</div>
           <div class="brand-tag gold-text" data-i18n="brand-tag">GREEK PREMIUM PRODUCTS</div>
         </div>
@@ -20,50 +20,69 @@
       <div class="header-actions">
         <nav class="main-nav">
           <a href="index.html" data-i18n="nav-home">Home</a>
-          <a href="about.html" data-i18n="nav-about">About</a>
           <a href="products.html" data-i18n="nav-products">Products</a>
-          <a href="contact.html" data-i18n="nav-contact">Contact</a>
+          <a href="about.html" data-i18n="nav-about">Company</a>
+          <a href="contact.html" data-i18n="nav-contact">Wholesale Enquiries</a>
         </nav>
-        <div class="lang-dropdown">
-          <button class="lang-toggle" aria-haspopup="listbox" aria-expanded="false">
-            <span class="lang-flag" aria-hidden="true">EN</span>
-            <span class="lang-label">English</span>
-          </button>
-          <div class="lang-menu" role="listbox">
-            <button role="option" data-lang="en" data-flag="EN"><span class="lang-flag">EN</span> English</button>
-            <button role="option" data-lang="de" data-flag="DE"><span class="lang-flag">DE</span> Deutsch</button>
-            <button role="option" data-lang="el" data-flag="EL"><span class="lang-flag">EL</span> Ελληνικά</button>
-          </div>
-        </div>
       </div>
     </div>
   </header>
 
   <section class="section">
     <div class="container">
-      <h1 data-i18n="contact-title">Contact</h1>
-      <p class="lead" data-i18n="contact-lead">Questions or collaborations — send us a note.</p>
+      <h1>Wholesale Enquiries</h1>
+      <p class="lead">Tell us about your business and volume needs. We reply within 24 hours.</p>
 
-      <!-- Simple, provider-agnostic form; replace action with Formspree/EmailJS endpoint -->
-      <form class="products" style="gap:1rem; grid-template-columns:1fr;" method="post" action="#">
+      <!-- Provider-agnostic form; replace action with your endpoint -->
+      <form class="products" style="gap:1rem;" method="post" action="#">
         <div>
-          <label for="name" data-i18n="contact-name-label">Name</label>
-          <input id="name" name="name" class="input" required/>
+          <label for="company">Company name</label>
+          <input id="company" name="company" class="input" required>
         </div>
         <div>
-          <label for="email" data-i18n="contact-email-label">Email</label>
-          <input id="email" name="email" type="email" class="input" required/>
+          <label for="country">Country</label>
+          <input id="country" name="country" class="input" required>
         </div>
         <div>
-          <label for="message" data-i18n="contact-message-label">Message</label>
-          <textarea id="message" name="message" rows="6" class="input" required></textarea>
+          <label for="contact-person">Contact person</label>
+          <input id="contact-person" name="contactPerson" class="input" required>
         </div>
         <div>
-          <button class="btn" type="submit" data-i18n="contact-submit">Send</button>
+          <label for="business-type">Type of business</label>
+          <select id="business-type" name="businessType" class="input" required>
+            <option value="" disabled selected>Select</option>
+            <option>Wholesaler / Distributor</option>
+            <option>Supermarket / Retail chain</option>
+            <option>Food importer</option>
+            <option>Delicacy / Specialty store</option>
+            <option>Hotel / HORECA</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="product-interest">Product interest</label>
+          <select id="product-interest" name="productInterest" class="input" required>
+            <option value="" disabled selected>Select</option>
+            <option>Retail jars</option>
+            <option>Bulk drums</option>
+            <option>Both retail &amp; bulk</option>
+            <option>Private label</option>
+          </select>
+        </div>
+        <div>
+          <label for="annual-volume">Estimated annual volume</label>
+          <input id="annual-volume" name="annualVolume" class="input" placeholder="e.g. 1-2 tons / year" required>
+        </div>
+        <div style="grid-column: 1 / -1;">
+          <label for="requirements">Additional requirements</label>
+          <textarea id="requirements" name="requirements" rows="5" class="input" placeholder="Private label, custom packaging, incoterms, timelines"></textarea>
+        </div>
+        <div>
+          <button class="btn" type="submit">Send enquiry</button>
         </div>
       </form>
 
-      <p style="margin-top:1rem" data-i18n="contact-email-alt">Prefer email? <a href="mailto:hello@aethera.gr">hello@aethera.gr</a></p>
+      <p style="margin-top:1rem">Prefer email? <a href="mailto:hello@aethera.gr">hello@aethera.gr</a></p>
     </div>
   </section>
 
@@ -79,3 +98,5 @@
   <script src="assets/js/lang.js"></script>
 </body>
 </html>
+
+
