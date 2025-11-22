@@ -1,0 +1,20 @@
+<svg width="640" height="420" viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Honey retail jar placeholder">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#1f1b14" offset="0%"/>
+      <stop stop-color="#2a2319" offset="50%"/>
+      <stop stop-color="#3a2f20" offset="100%"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop stop-color="#f4c457" offset="0%"/>
+      <stop stop-color="#dca73c" offset="60%"/>
+      <stop stop-color="#b27d23" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" fill="url(#g1)" rx="28"/>
+  <rect x="170" y="70" width="300" height="280" rx="26" fill="#f8f4ed" opacity="0.08" stroke="#d9c9a3" stroke-width="2"/>
+  <rect x="205" y="110" width="230" height="200" rx="18" fill="url(#g2)" stroke="#f3d27a" stroke-width="3" opacity="0.9"/>
+  <rect x="235" y="88" width="170" height="40" rx="10" fill="#1c1c1c" opacity="0.9" stroke="#f1d37c"/>
+  <text x="320" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#2a2116">Thyme Honey</text>
+  <text x="320" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#1c130c">Retail jar mockup</text>
+</svg>

@@ -15,7 +15,7 @@
         <div class="brand-text">
           <svg class="brand-est gold-text" width="120" height="20" viewBox="0 0 120 20" aria-hidden="true" focusable="false"><defs><path id="est-curve" d="M10,18 A50,50 0 0 1 110,18"/></defs><text style="font-size:11px; font-style:italic; letter-spacing:2px;" text-anchor="middle"><textPath href="#est-curve" startOffset="50%" style="fill: currentColor">AETHERA est 1934</textPath></text></svg>
           <div class="brand-name gold-text">AETHERA</div>
-          <div class="brand-tag gold-text" data-i18n="brand-tag">GREEK PREMIUM PRODUCTS</div>
+          <div class="brand-tag gold-text" data-i18n="brand-tag">GREEK PREMIUM HONEY</div>
         </div>
       </a>
       <div class="header-actions">
@@ -25,28 +25,39 @@
           <a href="about.html" data-i18n="nav-about">Company</a>
           <a href="contact.html" data-i18n="nav-contact">Wholesale Enquiries</a>
         </nav>
+        <div class="lang-dropdown">
+          <button class="lang-toggle" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-flag" aria-hidden="true">EN</span>
+            <span class="lang-label">English</span>
+          </button>
+          <div class="lang-menu" role="listbox">
+            <button role="option" data-lang="en" data-flag="EN"><span class="lang-flag">EN</span> English</button>
+            <button role="option" data-lang="de" data-flag="DE"><span class="lang-flag">DE</span> Deutsch</button>
+            <button role="option" data-lang="el" data-flag="EL"><span class="lang-flag">EL</span> Ελληνικά</button>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
-  <section class="section">
+  <section class="section section-company">
     <div class="container">
       <h1>Company Profile</h1>
       <p class="lead">
         Export-focused honey producer from Kos Island, Greece. We supply wholesalers, distributors and hospitality groups with retail-ready jars and bulk drums backed by lab-tested quality.
       </p>
 
-      <div class="products" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-        <div class="product-card">
+      <div class="company-grid">
+        <div class="company-card">
           <h3>Snapshot</h3>
           <ul>
             <li>Founded: 1934 (family-run, export-oriented)</li>
             <li>Location: Kefalos, Kos Island, Greece</li>
-            <li>Focus: Single-origin thyme, pine & wildflower honey</li>
-            <li>Exports: Retail jars & bulk for EU/international partners</li>
+            <li>Focus: Single-origin thyme, pine &amp; wildflower honey</li>
+            <li>Exports: Retail jars &amp; bulk for EU/international partners</li>
           </ul>
         </div>
-        <div class="product-card">
+        <div class="company-card">
           <h3>Production &amp; Capacity</h3>
           <ul>
             <li>Harvests: Summer (thyme), Autumn (pine/wildflower)</li>
@@ -55,7 +66,7 @@
             <li>Lead times: 1-3 weeks depending on labels and stock</li>
           </ul>
         </div>
-        <div class="product-card">
+        <div class="company-card">
           <h3>Quality Control</h3>
           <ul>
             <li>Batch traceability by harvest and apiary location</li>
@@ -64,7 +75,7 @@
             <li>EU food safety and export documentation provided</li>
           </ul>
         </div>
-        <div class="product-card">
+        <div class="company-card">
           <h3>Logistics &amp; Support</h3>
           <ul>
             <li>Incoterms: EXW Kos / FOB Piraeus</li>
@@ -77,11 +88,11 @@
     </div>
   </section>
 
-  <section class="section section-light">
+  <section class="section section-company">
     <div class="container">
       <h2>Quality &amp; Process</h2>
-      <div class="products" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-        <div class="product-card">
+      <div class="company-grid">
+        <div class="company-card">
           <h3>Quality Control Steps</h3>
           <ul>
             <li>Raw intake: visual inspection, moisture check, lot coding</li>
@@ -89,7 +100,7 @@
             <li>Packing: filtered for particulates, unheated to preserve enzymes</li>
           </ul>
         </div>
-        <div class="product-card">
+        <div class="company-card">
           <h3>Sustainability &amp; Beekeeping</h3>
           <ul>
             <li>Apiaries placed among thyme and pine flora in Kos</li>
@@ -97,7 +108,7 @@
             <li>Respectful harvesting to maintain colony health</li>
           </ul>
         </div>
-        <div class="product-card">
+        <div class="company-card">
           <h3>Documentation</h3>
           <ul>
             <li>COA and lab PDF available per shipment</li>
@@ -105,6 +116,9 @@
             <li>Veterinary/health certificates where required</li>
           </ul>
           <a href="contact.html" class="link-arrow" style="margin-top:.5rem; display:inline-block;">Request analysis samples</a>
+        </div>
+        <div class="company-visual">
+          <img src="assets/images/company-facility-placeholder.svg" alt="AETHERA facility placeholder">
         </div>
       </div>
     </div>
@@ -123,6 +137,10 @@
   <script src="assets/js/lang.js"></script>
 </body>
 </html>
+
+
+
+
 
 
 

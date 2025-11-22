@@ -15,7 +15,7 @@
         <div class="brand-text">
           <svg class="brand-est gold-text" width="120" height="20" viewBox="0 0 120 20" aria-hidden="true" focusable="false"><defs><path id="est-curve" d="M10,18 A50,50 0 0 1 110,18"/></defs><text style="font-size:11px; font-style:italic; letter-spacing:2px;" text-anchor="middle"><textPath href="#est-curve" startOffset="50%" style="fill: currentColor">AETHERA est 1934</textPath></text></svg>
           <div class="brand-name gold-text">AETHERA</div>
-          <div class="brand-tag gold-text" data-i18n="brand-tag">GREEK PREMIUM PRODUCTS</div>
+          <div class="brand-tag gold-text" data-i18n="brand-tag">GREEK PREMIUM HONEY</div>
         </div>
       </a>
       <div class="header-actions">
@@ -25,6 +25,17 @@
           <a href="about.html" data-i18n="nav-about">Company</a>
           <a href="contact.html" data-i18n="nav-contact">Wholesale Enquiries</a>
         </nav>
+        <div class="lang-dropdown">
+          <button class="lang-toggle" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-flag" aria-hidden="true">EN</span>
+            <span class="lang-label">English</span>
+          </button>
+          <div class="lang-menu" role="listbox">
+            <button role="option" data-lang="en" data-flag="EN"><span class="lang-flag">EN</span> English</button>
+            <button role="option" data-lang="de" data-flag="DE"><span class="lang-flag">DE</span> Deutsch</button>
+            <button role="option" data-lang="el" data-flag="EL"><span class="lang-flag">EL</span> Ελληνικά</button>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -33,6 +44,7 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
+        <p class="hero-overline">AETHERA | Kos Island, Greece</p>
         <h1>Premium Greek Honey for Wholesale &amp; Export</h1>
         <p class="hero-subtitle">
           Single-origin honey from Kos Island, crafted in small batches and supplied in both bulk and retail packaging.
@@ -53,7 +65,7 @@
   </section>
 
   <!-- Who we are preview -->
-  <section class="section section-light">
+  <section class="section section-light" style="background-image: url('assets/images/pattern-who-we-are.svg'), linear-gradient(180deg, color-mix(in oklab, var(--line) 12%, transparent) 0%, transparent 80%); background-size: 320px 320px, auto; background-repeat: repeat, no-repeat;">
     <div class="container">
       <h2>Who We Are</h2>
       <p>
@@ -69,22 +81,26 @@
     <div class="container">
       <h2>Wholesale Honey Portfolio</h2>
       <div class="products">
-        <div class="product-card">
-          <img src="assets/images/featured-honey-real.svg" alt="Retail honey jars" width="960" height="640">
-          <h4>
-            <img class="product-icon" src="assets/icons/product-jar.svg" alt="Jar icon">
-            <span>Retail Honey (Jars)</span>
-          </h4>
-          <p>Premium glass jars (250g / 450g / 950g) for gourmet retail and boutique shelves.</p>
-        </div>
-        <div class="product-card">
-          <img src="assets/images/featured-honey-real.svg" alt="Bulk honey drums" width="960" height="640">
-          <h4>
-            <img class="product-icon" src="assets/icons/product-comb.svg" alt="Honeycomb icon">
-            <span>Bulk Honey (20kg - 300kg)</span>
-          </h4>
-          <p>Food-grade pails and drums for wholesalers, repackers, and food manufacturers.</p>
-        </div>
+        <a class="card-link" href="products.html#honey">
+          <div class="product-card">
+            <img src="assets/images/placeholder-honey-retail.svg" alt="Retail honey jars" width="960" height="640">
+            <h4>
+              <img class="product-icon" src="assets/icons/product-jar.svg" alt="Jar icon">
+              <span>Retail Honey (Jars)</span>
+            </h4>
+            <p>Premium glass jars (250g / 450g / 950g) for gourmet retail and boutique shelves.</p>
+          </div>
+        </a>
+        <a class="card-link" href="products.html#olive">
+          <div class="product-card">
+            <img src="assets/images/placeholder-olive-retail.svg" alt="Extra virgin olive oil bottles" width="960" height="640">
+            <h4>
+              <img class="product-icon" src="assets/icons/product-olive.svg" alt="Olive icon">
+              <span>Extra Virgin Olive Oil</span>
+            </h4>
+            <p>Cold-pressed EVOO for premium retail and HORECA programs; bulk tins and IBC on request.</p>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -111,6 +127,12 @@
   <script src="assets/js/lang.js"></script>
 </body>
 </html>
+
+
+
+
+
+
 
 
 
