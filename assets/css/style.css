@@ -88,6 +88,7 @@ p{ margin: 0 0 1rem; color: var(--fg); }
   color: #fff;
 }
 .site-header .container{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -142,6 +143,26 @@ p{ margin: 0 0 1rem; color: var(--fg); }
   display: flex;
   align-items: center;
   gap: .75rem;
+}
+.nav-toggle{
+  display: none;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid color-mix(in oklab, var(--accent) 50%, #fff);
+  background: color-mix(in oklab, var(--brand) 88%, var(--accent) 12%);
+  cursor: pointer;
+}
+.nav-toggle span{
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #fff;
+  border-radius: 999px;
 }
 @media (max-width: 720px){
   .header-actions{
@@ -767,6 +788,42 @@ form.products{ grid-template-columns: 1fr 1fr; }
 @media (min-width: 1200px){
   .container{ max-width: calc(var(--container) + 40px); }
 }
+@media (max-width: 1024px){
+  .site-header .container{
+    align-items: flex-start;
+  }
+}
+@media (max-width: 900px){
+  .logo{ height: 38px; }
+  .header-actions{ gap: .5rem; }
+  .nav-toggle{ display: inline-flex; }
+  .main-nav{
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    left: 1rem;
+    display: none;
+    flex-direction: column;
+    gap: .25rem;
+    padding: .65rem;
+    border: 1px solid color-mix(in oklab, var(--accent) 45%, var(--brand));
+    border-radius: var(--radius-md);
+    background: color-mix(in oklab, var(--brand) 88%, var(--bg) 12%);
+    box-shadow: 0 10px 26px rgba(0,0,0,.18);
+  }
+  .main-nav a{
+    width: 100%;
+    padding: .55rem .65rem;
+    border-radius: var(--radius-sm);
+    background: transparent;
+  }
+  .main-nav.open{ display: flex; }
+  .lang-dropdown{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
 @media (max-width: 860px){
   .main-nav{ gap: .5rem; }
   .main-nav a{ padding: .4rem .55rem; }
@@ -780,6 +837,17 @@ form.products{ grid-template-columns: 1fr 1fr; }
 @media (max-width: 640px){
   .hero-content h1{ font-size: 1.9rem; }
   .hero{ text-align: left; }
+  .site-header .container{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .header-actions{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .lang-dropdown{
+    justify-content: flex-start;
+  }
 }
 
 /* ------------------------------------------------------------

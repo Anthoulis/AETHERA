@@ -7,37 +7,7 @@
   <link rel="stylesheet" href="../assets/css/style.css"/>
 </head>
 <body class="page-legal page-privacy">
-  <header class="site-header">
-    <div class="container">
-      <a href="../index.html" class="brand" aria-label="AETHERA - Greek Premium Products (home)">
-        <img src="../assets/icons/logo.svg" alt="AETHERA Logo" class="logo">
-        <div class="brand-text">
-          <svg class="brand-est gold-text" width="120" height="20" viewBox="0 0 120 20" aria-hidden="true" focusable="false"><defs><path id="est-curve" d="M10,18 A50,50 0 0 1 110,18"/></defs><text style="font-size:11px; font-style:italic; letter-spacing:2px;" text-anchor="middle"><textPath href="#est-curve" startOffset="50%" style="fill: currentColor">AETHERA est 1934</textPath></text></svg>
-          <div class="brand-name gold-text">AETHERA</div>
-          <div class="brand-tag gold-text" data-i18n="brand-tag">GREEK PREMIUM HONEY</div>
-        </div>
-      </a>
-      <div class="header-actions">
-        <nav class="main-nav">
-          <a href="../index.html" data-i18n="nav-home">Home</a>
-          <a href="../about.html" data-i18n="nav-about">Company</a>
-          <a href="../products.html" data-i18n="nav-products">Products</a>
-          <a href="../contact.html" data-i18n="nav-contact">Wholesale Enquiries</a>
-        </nav>
-        <div class="lang-dropdown">
-          <button class="lang-toggle" aria-haspopup="listbox" aria-expanded="false">
-            <span class="lang-flag" aria-hidden="true">EN</span>
-            <span class="lang-label">English</span>
-          </button>
-          <div class="lang-menu" role="listbox">
-            <button role="option" data-lang="en" data-flag="EN"><span class="lang-flag">EN</span> English</button>
-            <button role="option" data-lang="de" data-flag="DE"><span class="lang-flag">DE</span> Deutsch</button>
-            <button role="option" data-lang="el" data-flag="EL"><span class="lang-flag">EL</span> Ελληνικά</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  <div id="header"></div>
 
   <section class="section">
     <div class="container">
@@ -58,16 +28,8 @@
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p data-i18n="footer-copy">&copy; 2025 AETHERA. All rights reserved.</p>
-      <nav class="footer-nav">
-        <a href="privacy.html" data-i18n="footer-privacy">Privacy Policy</a>
-        <a href="terms.html" data-i18n="footer-terms">Terms &amp; Conditions</a>
-      </nav>
-    </div>
-  </footer>
-  <script src="../assets/js/lang.js"></script>
+  <div id="footer"></div>
+  <script type="module" src="../src/app.js"></script>
 </body>
 </html>
 
