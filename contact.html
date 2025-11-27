@@ -41,58 +41,58 @@
 
   <section class="section">
     <div class="container">
-      <h1>Wholesale Enquiries</h1>
-      <p class="lead">Tell us about your business and volume needs. We reply within 24 hours.</p>
+      <h1 data-i18n="contact-title">Wholesale Enquiries</h1>
+      <p class="lead" data-i18n="contact-lead">Tell us about your business and volume needs. We reply within 24 hours.</p>
 
       <!-- Provider-agnostic form; replace action with your endpoint -->
       <form class="products" style="gap:1rem;" method="post" action="#">
         <div>
-          <label for="company">Company name</label>
+          <label for="company" data-i18n="contact-company-label">Company name</label>
           <input id="company" name="company" class="input" required>
         </div>
         <div>
-          <label for="country">Country</label>
+          <label for="country" data-i18n="contact-country-label">Country</label>
           <input id="country" name="country" class="input" required>
         </div>
         <div>
-          <label for="contact-person">Contact person</label>
+          <label for="contact-person" data-i18n="contact-person-label">Contact person</label>
           <input id="contact-person" name="contactPerson" class="input" required>
         </div>
         <div>
-          <label for="business-type">Type of business</label>
+          <label for="business-type" data-i18n="contact-business-label">Type of business</label>
           <select id="business-type" name="businessType" class="input" required>
-            <option value="" disabled selected>Select</option>
-            <option>Wholesaler / Distributor</option>
-            <option>Supermarket / Retail chain</option>
-            <option>Food importer</option>
-            <option>Delicacy / Specialty store</option>
-            <option>Hotel / HORECA</option>
-            <option>Other</option>
+            <option value="" disabled selected data-i18n="contact-business-placeholder">Select</option>
+            <option data-i18n="contact-business-1">Wholesaler / Distributor</option>
+            <option data-i18n="contact-business-2">Supermarket / Retail chain</option>
+            <option data-i18n="contact-business-3">Food importer</option>
+            <option data-i18n="contact-business-4">Delicacy / Specialty store</option>
+            <option data-i18n="contact-business-5">Hotel / HORECA</option>
+            <option data-i18n="contact-business-6">Other</option>
           </select>
         </div>
         <div>
-          <label for="product-interest">Product interest</label>
+          <label for="product-interest" data-i18n="contact-product-label">Product interest</label>
           <select id="product-interest" name="productInterest" class="input" required>
-            <option value="" disabled selected>Select</option>
-            <option>Retail jars</option>
-            <option>Bulk drums</option>
-            <option>Both retail &amp; bulk</option>
+            <option value="" disabled selected data-i18n="contact-product-placeholder">Select</option>
+            <option data-i18n="contact-product-1">Retail jars</option>
+            <option data-i18n="contact-product-2">Bulk drums</option>
+            <option data-i18n="contact-product-3">Both retail &amp; bulk</option>
           </select>
         </div>
         <div>
-          <label for="annual-volume">Estimated annual volume</label>
-          <input id="annual-volume" name="annualVolume" class="input" placeholder="e.g. 1-2 tons / year" required>
+          <label for="annual-volume" data-i18n="contact-volume-label">Estimated annual volume</label>
+          <input id="annual-volume" name="annualVolume" class="input" placeholder="e.g. 1-2 tons / year" data-i18n-placeholder="contact-volume-placeholder" required>
         </div>
         <div style="grid-column: 1 / -1;">
-          <label for="requirements">Additional requirements</label>
-          <textarea id="requirements" name="requirements" rows="5" class="input" placeholder="Label languages, incoterms, timelines, delivery notes"></textarea>
+          <label for="requirements" data-i18n="contact-req-label">Additional requirements</label>
+          <textarea id="requirements" name="requirements" rows="5" class="input" placeholder="Label languages, incoterms, timelines, delivery notes" data-i18n-placeholder="contact-req-placeholder"></textarea>
         </div>
         <div>
-          <button class="btn" type="submit">Send enquiry</button>
+          <button class="btn" type="submit" data-i18n="contact-submit">Send enquiry</button>
         </div>
       </form>
 
-      <p style="margin-top:1rem">Prefer email? <a href="mailto:hello@aethera.gr">hello@aethera.gr</a></p>
+      <p style="margin-top:1rem" data-i18n="contact-email">Prefer email? <a href="mailto:hello@aethera.gr">hello@aethera.gr</a></p>
     </div>
   </section>
 
@@ -108,11 +108,3 @@
   <script src="assets/js/lang.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
