@@ -116,6 +116,7 @@
   "contact-company-label": "Firmenname",
   "contact-country-label": "Land",
   "contact-person-label": "Ansprechpartner",
+  "contact-email-label": "Business-E-Mail",
   "contact-business-label": "Art des Unternehmens",
   "contact-business-placeholder": "Auswahl",
   "contact-business-1": "Großhändler / Distributor",
@@ -132,7 +133,11 @@
   "contact-volume-label": "Geschätztes Jahresvolumen",
   "contact-volume-placeholder": "z. B. 1–2 Tonnen / Jahr",
   "contact-req-label": "Weitere Anforderungen",
-  "contact-req-placeholder": "Etikettensprachen, Incoterms, Zeitplan, Lieferhinweise",
+    "contact-req-placeholder": "Etikettensprachen, Incoterms, Zeitplan, Lieferhinweise",
+  "contact-status-sending": "Senden...",
+  "contact-status-success": "Danke, Ihre Anfrage wurde gesendet. Wir melden uns innerhalb von 24 Stunden.",
+  "contact-status-error": "Senden nicht moeglich. Bitte schreiben Sie an hello@aethera.gr.",
+  "contact-status-missing-endpoint": "Formular-Endpunkt fehlt. Bitte formsConfig.wholesaleEndpoint setzen.",
   "contact-submit": "Anfrage senden",
   "contact-email": "Lieber per E-Mail? <a href=\"mailto:hello@aethera.gr\">hello@aethera.gr</a>",
 
@@ -159,3 +164,5 @@
   "footer-privacy": "Datenschutz",
   "footer-terms": "AGB"
 }
+
+

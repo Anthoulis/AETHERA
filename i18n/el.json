@@ -116,6 +116,7 @@
   "contact-company-label": "Επωνυμία εταιρείας",
   "contact-country-label": "Χώρα",
   "contact-person-label": "Υπεύθυνος επικοινωνίας",
+  "contact-email-label": "Work email",
   "contact-business-label": "Τύπος επιχείρησης",
   "contact-business-placeholder": "Επιλογή",
   "contact-business-1": "Χονδρέμπορος / Διανομέας",
@@ -133,6 +134,10 @@
   "contact-volume-placeholder": "π.χ. 1–2 τόνοι / έτος",
   "contact-req-label": "Επιπλέον απαιτήσεις",
   "contact-req-placeholder": "Γλώσσες ετικετών, incoterms, χρονοδιάγραμμα, σημειώσεις παράδοσης",
+  "contact-status-sending": "Sending...",
+  "contact-status-success": "Thank you - your enquiry was sent. We'll reply within 24 hours.",
+  "contact-status-error": "We couldn't send this right now. Please email hello@aethera.gr.",
+  "contact-status-missing-endpoint": "Form endpoint missing. Please add formsConfig.wholesaleEndpoint.",
   "contact-submit": "Αποστολή ερώτησης",
   "contact-email": "Προτιμάτε email; <a href=\"mailto:hello@aethera.gr\">hello@aethera.gr</a>",
 
@@ -159,3 +164,4 @@
   "footer-privacy": "Πολιτική Απορρήτου",
   "footer-terms": "Όροι & Προϋποθέσεις"
 }
+

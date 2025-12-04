@@ -116,6 +116,7 @@
   "contact-company-label": "Company name",
   "contact-country-label": "Country",
   "contact-person-label": "Contact person",
+  "contact-email-label": "Work email",
   "contact-business-label": "Type of business",
   "contact-business-placeholder": "Select",
   "contact-business-1": "Wholesaler / Distributor",
@@ -133,6 +134,10 @@
   "contact-volume-placeholder": "e.g. 1-2 tons / year",
   "contact-req-label": "Additional requirements",
   "contact-req-placeholder": "Label languages, incoterms, timelines, delivery notes",
+  "contact-status-sending": "Sending...",
+  "contact-status-success": "Thank you - your enquiry was sent. We'll reply within 24 hours.",
+  "contact-status-error": "We couldn't send this right now. Please email hello@aethera.gr.",
+  "contact-status-missing-endpoint": "Form endpoint missing. Please add formsConfig.wholesaleEndpoint.",
   "contact-submit": "Send enquiry",
   "contact-email": "Prefer email? <a href=\"mailto:hello@aethera.gr\">hello@aethera.gr</a>",
 

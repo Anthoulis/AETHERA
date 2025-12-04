@@ -14,8 +14,15 @@
       <h1 data-i18n="contact-title">Wholesale Enquiries</h1>
       <p class="lead" data-i18n="contact-lead">Tell us about your business and volume needs. We reply within 24 hours.</p>
 
-      <!-- Provider-agnostic form; replace action with your endpoint -->
-      <form class="products" style="gap:1rem;" method="post" action="#">
+      <!-- Provider-agnostic form; wired to FormSubmit by default -->
+      <form
+        class="products"
+        style="gap:1rem;"
+        method="post"
+        action="https://formsubmit.co/hello@aethera.gr"
+        data-wholesale-form
+        data-endpoint="https://formsubmit.co/ajax/hello@aethera.gr"
+      >
         <div>
           <label for="company" data-i18n="contact-company-label">Company name</label>
           <input id="company" name="company" class="input" required>
@@ -27,6 +34,10 @@
         <div>
           <label for="contact-person" data-i18n="contact-person-label">Contact person</label>
           <input id="contact-person" name="contactPerson" class="input" required>
+        </div>
+        <div>
+          <label for="email" data-i18n="contact-email-label">Work email</label>
+          <input id="email" type="email" name="email" class="input" required>
         </div>
         <div>
           <label for="business-type" data-i18n="contact-business-label">Type of business</label>
@@ -59,6 +70,9 @@
         </div>
         <div>
           <button class="btn" type="submit" data-i18n="contact-submit">Send enquiry</button>
+        </div>
+        <div style="grid-column: 1 / -1;">
+          <div class="form-status" data-form-status aria-live="polite"></div>
         </div>
       </form>
 

@@ -82,9 +82,11 @@ p{ margin: 0 0 1rem; color: var(--fg); }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: color-mix(in oklab, var(--brand) 80%, transparent);
+  background: linear-gradient(180deg,
+              color-mix(in oklab, #0f0f11 92%, rgba(0,0,0,0.08)) 0%,
+              color-mix(in oklab, #0b0b0d 90%, rgba(0,0,0,0.1)) 100%);
   backdrop-filter: saturate(1.1) blur(8px);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid color-mix(in oklab, var(--line) 70%, var(--accent) 10%);
   color: #fff;
 }
 .site-header .container{
@@ -133,11 +135,11 @@ p{ margin: 0 0 1rem; color: var(--fg); }
   padding: .45rem .7rem;
   border-radius: var(--radius-sm);
   color: #fff;
-  opacity: .9;
+  opacity: .92;
 }
 .main-nav a:hover{
   opacity: 1;
-  background: rgba(255,255,255,0.12);
+  background: color-mix(in oklab, #ffffff 12%, var(--brand));
 }
 .header-actions{
   display: flex;
@@ -435,7 +437,7 @@ p{ margin: 0 0 1rem; color: var(--fg); }
   background:
     url('../images/pattern-honey.svg'),
     radial-gradient(140% 120% at 10% 10%, rgba(207,167,43,0.16), transparent 45%),
-    linear-gradient(120deg, #0b0a0a 0%, #111014 60%, #0b0a0a 100%);
+    linear-gradient(135deg, #16141c 0%, #100f15 55%, #0d0c12 100%);
   background-size: 360px 360px, auto, auto;
   background-repeat: repeat, no-repeat, no-repeat;
   color: #f7f2e6;
@@ -446,24 +448,29 @@ p{ margin: 0 0 1rem; color: var(--fg); }
 .section-honey p,
 .section-honey li{ color: #f7f2e6; }
 .section-honey .pill{
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.06);
   color: #f8f3e7;
-  border: 1px solid rgba(207,167,43,0.35);
+  border: 1px solid rgba(207,167,43,0.32);
 }
 .section-honey .product-card{
-  background: rgba(17,16,18,0.7);
-  border: 1px solid rgba(207,167,43,0.28);
+  background: linear-gradient(180deg, #1b1822 0%, #131019 100%);
+  border: 1px solid rgba(207,167,43,0.3);
   color: #f7f2e6;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.26);
 }
 .section-honey .product-card p,
 .section-honey .product-card ul{ color: #e8e0cf; }
+.section-honey .product-visual{
+  background: #14111a;
+  border-color: color-mix(in oklab, var(--accent) 24%, #1b1821);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.22);
+}
 
 .section-olive{
   background:
     url('../images/pattern-olive.svg'),
     radial-gradient(140% 130% at 90% 20%, rgba(66,112,66,0.16), transparent 50%),
-    linear-gradient(120deg, #0f150f 0%, #162418 60%, #0f150f 100%);
+    linear-gradient(120deg, #161c17 0%, #101711 55%, #0d140f 100%);
   background-size: 360px 360px, auto, auto;
   background-repeat: repeat, no-repeat, no-repeat;
   color: #edf3e6;
@@ -474,32 +481,37 @@ p{ margin: 0 0 1rem; color: var(--fg); }
 .section-olive p,
 .section-olive li{ color: #edf3e6; }
 .section-olive .pill{
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.05);
   color: #edf3e6;
-  border: 1px solid rgba(154,190,143,0.32);
+  border: 1px solid rgba(154,190,143,0.3);
 }
 .section-olive .product-card{
-  background: rgba(19,29,21,0.75);
+  background: linear-gradient(180deg, #1a221b 0%, #101711 100%);
   border: 1px solid rgba(154,190,143,0.28);
   color: #edf3e6;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.32);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.28);
 }
 .section-olive .product-card p,
 .section-olive .product-card ul{ color: #dce8d4; }
+.section-olive .product-visual{
+  background: #131a14;
+  border-color: color-mix(in oklab, #9abe8f 24%, #1b211b);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.22);
+}
 
 /* Products grid */
 .section.products-section{
   background:
     radial-gradient(120% 140% at 50% 0%, rgba(207,167,43,0.12), transparent 70%),
-    linear-gradient(180deg, color-mix(in oklab, var(--line) 18%, transparent), transparent 70%);
-  border-top: 1px solid color-mix(in oklab, var(--line) 40%, transparent);
-  border-bottom: 1px solid color-mix(in oklab, var(--line) 35%, transparent);
+    linear-gradient(180deg, color-mix(in oklab, #141118 82%, rgba(0,0,0,0.08)) 0%, color-mix(in oklab, #0e0c12 90%, rgba(0,0,0,0.12)) 70%);
+  border-top: 1px solid color-mix(in oklab, var(--accent) 18%, var(--line));
+  border-bottom: 1px solid color-mix(in oklab, var(--accent) 16%, var(--line));
 }
 .section.products-section .product-card{
-  background: #121015;
+  background: linear-gradient(180deg, #1a1720 0%, #12101a 100%);
   color: #f7f2e6;
-  border: 1px solid rgba(207,167,43,0.26);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+  border: 1px solid rgba(207,167,43,0.24);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.2);
 }
 .section.products-section .product-card h4,
 .section.products-section .product-card p{ color: #f7f2e6; }
@@ -643,12 +655,12 @@ section[id]{
   gap: 1rem;
 }
 .company-card{
-  background: linear-gradient(180deg, #100f12 0%, #0c0b0d 100%);
-  border: 1px solid rgba(207,167,43,0.35);
+  background: linear-gradient(180deg, #191620 0%, #110f17 100%);
+  border: 1px solid rgba(207,167,43,0.32);
   color: #f6f1e4;
   border-radius: var(--radius-md);
   padding: 1rem 1.1rem;
-  box-shadow: 0 12px 26px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.24);
 }
 .company-card h3{ color: #f9e9b8; margin-top: 0; }
 .company-card ul{
@@ -753,19 +765,45 @@ section[id]{
 label{ display:block; font-weight: 600; margin: .3rem 0 .35rem; }
 form.products{ grid-template-columns: 1fr 1fr; }
 @media (max-width: 720px){ form.products{ grid-template-columns: 1fr; } }
+.form-status{
+  display: none;
+  margin-top: .35rem;
+  padding: .65rem .75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid color-mix(in oklab, var(--line) 60%, transparent);
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+.form-status.show{ display: block; }
+.form-status.success{
+  background: color-mix(in oklab, #16a34a 12%, var(--bg));
+  border-color: color-mix(in oklab, #15803d 50%, var(--line));
+  color: #0f5132;
+}
+.form-status.error{
+  background: color-mix(in oklab, #dc2626 10%, var(--bg));
+  border-color: color-mix(in oklab, #b91c1c 55%, var(--line));
+  color: #5f1111;
+}
+.btn[disabled]{
+  opacity: .7;
+  cursor: not-allowed;
+}
 
 /* ------------------------------------------------------------
    Footer
 ------------------------------------------------------------- */
 .site-footer{
-  background: var(--brand);
-  color: #fff;
-  border-top: 1px solid color-mix(in oklab, var(--line) 35%, transparent);
+  background: linear-gradient(180deg,
+              color-mix(in oklab, #111015 96%, rgba(0,0,0,0.06)) 0%,
+              color-mix(in oklab, #0c0b10 94%, rgba(0,0,0,0.08)) 100%);
+  color: #f6f1e4;
+  border-top: 1px solid color-mix(in oklab, var(--accent) 22%, var(--line));
   padding: 1.25rem 0;
   text-align: center;
 }
 .footer-nav{ display: inline-flex; gap: .75rem; margin-top: .25rem; }
-.footer-nav a{ color: #fff; opacity: .9; }
+.footer-nav a{ color: #f6f1e4; opacity: .9; }
 .footer-nav a:hover{ opacity: 1; text-decoration: underline; }
 
 /* ------------------------------------------------------------
@@ -781,6 +819,112 @@ form.products{ grid-template-columns: 1fr 1fr; }
 .page-contact form textarea{ background: #fff; }
 .page-legal h1{ margin-bottom: .5rem; }
 .page-privacy p, .page-terms p{ color: var(--muted); }
+
+/* Wholesale enquiries (contact) – darker charcoal palette */
+.page-contact .section{
+  background: linear-gradient(175deg, #15131c 0%, #0f0d14 100%);
+  color: #f3ede0;
+  border-top: 1px solid color-mix(in oklab, var(--accent) 18%, var(--line));
+  border-bottom: 1px solid color-mix(in oklab, var(--accent) 16%, var(--line));
+  box-shadow: inset 0 10px 22px rgba(0,0,0,0.18);
+}
+.page-contact .section .container{
+  background: color-mix(in oklab, #1a1721 85%, rgba(0,0,0,0.08));
+  border: 1px solid color-mix(in oklab, var(--accent) 18%, var(--line));
+  border-radius: var(--radius-lg);
+  padding: 1.4rem;
+  box-shadow: 0 16px 28px rgba(0,0,0,0.18);
+}
+.page-contact h1,
+.page-contact .lead,
+.page-contact p{ color: #f3ede0; }
+.page-contact label{ color: #f6f1e6; }
+.page-contact .input,
+.page-contact textarea,
+.page-contact select{
+  background: #120f18;
+  color: #f6f1e6;
+  border: 1px solid color-mix(in oklab, var(--accent) 26%, #1d1a22);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+}
+.page-contact .input::placeholder,
+.page-contact textarea::placeholder{
+  color: color-mix(in oklab, #f6f1e6 60%, #8c8596);
+}
+.page-contact .input:focus,
+.page-contact textarea:focus,
+.page-contact select:focus{
+  border-color: color-mix(in oklab, var(--accent) 46%, #1d1a22);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 18%, transparent);
+}
+
+/* ------------------------------------------------------------
+   Products page refinements (charcoal brightening)
+------------------------------------------------------------- */
+body.page-products{
+  background: radial-gradient(120% 140% at 15% 10%, rgba(207,167,43,0.05), transparent 45%),
+              linear-gradient(180deg, #0d0b12 0%, #0a0910 100%);
+}
+.page-products .section:not(.section-honey):not(.section-olive):not(.products-section):not(.cta){
+  background:
+    radial-gradient(160% 120% at 80% 0%, rgba(255,255,255,0.04), transparent 55%),
+    linear-gradient(180deg, #16121f 0%, #0f0d14 100%);
+  color: #f2ede2;
+  border-top: 1px solid color-mix(in oklab, var(--accent) 16%, var(--line));
+  border-bottom: 1px solid color-mix(in oklab, var(--accent) 14%, var(--line));
+  box-shadow: inset 0 10px 20px rgba(0,0,0,0.18);
+}
+.page-products .section:not(.section-honey):not(.section-olive):not(.products-section):not(.cta) .container{
+  background: color-mix(in oklab, #1a1721 88%, rgba(0,0,0,0.1));
+  border: 1px solid color-mix(in oklab, var(--accent) 18%, #1c1822);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem;
+  box-shadow: 0 16px 26px rgba(0,0,0,0.18);
+}
+.page-products h1,
+.page-products h2,
+.page-products p,
+.page-products .lead{ color: #f2ede2; }
+
+.page-products .section.products-section{
+  background:
+    radial-gradient(120% 140% at 50% 0%, rgba(207,167,43,0.12), transparent 70%),
+    radial-gradient(120% 120% at 90% 20%, rgba(255,255,255,0.04), transparent 55%),
+    linear-gradient(180deg, #171322 0%, #0f0d14 70%);
+  border-top: 1px solid color-mix(in oklab, var(--accent) 18%, var(--line));
+  border-bottom: 1px solid color-mix(in oklab, var(--accent) 16%, var(--line));
+}
+.page-products .section-honey{
+  background:
+    radial-gradient(180% 140% at 12% 12%, rgba(207,167,43,0.18), transparent 46%),
+    radial-gradient(140% 140% at 88% 0%, rgba(255,255,255,0.05), transparent 52%),
+    linear-gradient(140deg, #211b2a 0%, #171221 55%, #100d16 100%);
+}
+.page-products .section-olive{
+  background:
+    radial-gradient(180% 140% at 86% 12%, rgba(96,139,87,0.18), transparent 48%),
+    radial-gradient(130% 130% at 8% 0%, rgba(255,255,255,0.05), transparent 50%),
+    linear-gradient(135deg, #1f261f 0%, #141b14 55%, #0f160f 100%);
+}
+
+.page-products .product-card{
+  background: linear-gradient(180deg, #221d29 0%, #16111d 100%);
+  border: 1px solid color-mix(in oklab, var(--accent) 22%, #1c1822);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  color: #f6f1e6;
+}
+.page-products .product-card p,
+.page-products .product-card ul{ color: #e5dfd4; }
+.page-products .product-visual{
+  background: #16111d;
+  border-color: color-mix(in oklab, var(--accent) 18%, #1c1822);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.22);
+}
+.page-products .pill{
+  background: rgba(255,255,255,0.06);
+  color: #f6f1e6;
+  border: 1px solid color-mix(in oklab, var(--accent) 24%, #1f1a24);
+}
 
 /* ------------------------------------------------------------
    Responsive refinements
@@ -871,8 +1015,8 @@ form.products{ grid-template-columns: 1fr 1fr; }
 .section-company{
   background:
     url('../images/pattern-honey.svg'),
-    radial-gradient(140% 140% at 20% 10%, rgba(207,167,43,0.14), transparent 45%),
-    linear-gradient(135deg, #0c0b0e 0%, #100f14 60%, #0c0b0e 100%);
+    radial-gradient(140% 140% at 20% 10%, rgba(207,167,43,0.16), transparent 45%),
+    linear-gradient(135deg, #16141c 0%, #100f15 60%, #0d0c13 100%);
   background-size: 360px 360px, auto, auto;
   background-repeat: repeat, no-repeat, no-repeat;
   color: #f6f1e4;
