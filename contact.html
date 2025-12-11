@@ -16,8 +16,7 @@
 
       <!-- Provider-agnostic form; wired to FormSubmit by default -->
       <form
-        class="products"
-        style="gap:1rem;"
+        class="products gap-4"
         method="post"
         action="https://formsubmit.co/hello@aethera.gr"
         data-wholesale-form
@@ -64,19 +63,19 @@
           <label for="annual-volume" data-i18n="contact-volume-label">Estimated annual volume</label>
           <input id="annual-volume" name="annualVolume" class="input" placeholder="e.g. 1-2 tons / year" data-i18n-placeholder="contact-volume-placeholder" required>
         </div>
-        <div style="grid-column: 1 / -1;">
+        <div class="span-all">
           <label for="requirements" data-i18n="contact-req-label">Additional requirements</label>
           <textarea id="requirements" name="requirements" rows="5" class="input" placeholder="Label languages, incoterms, timelines, delivery notes" data-i18n-placeholder="contact-req-placeholder"></textarea>
         </div>
         <div>
           <button class="btn" type="submit" data-i18n="contact-submit">Send enquiry</button>
         </div>
-        <div style="grid-column: 1 / -1;">
+        <div class="span-all">
           <div class="form-status" data-form-status aria-live="polite"></div>
         </div>
       </form>
 
-      <p style="margin-top:1rem" data-i18n="contact-email">Prefer email? <a href="mailto:hello@aethera.gr">hello@aethera.gr</a></p>
+      <p class="mt-4" data-i18n="contact-email">Prefer email? <a href="mailto:hello@aethera.gr">hello@aethera.gr</a></p>
     </div>
   </section>
 

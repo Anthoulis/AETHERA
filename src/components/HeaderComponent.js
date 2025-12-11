@@ -18,7 +18,7 @@ export class HeaderComponent {
           <img src="/assets/icons/logo.svg" alt="AETHERA Logo" class="logo">
           <div class="brand-text">
             <div class="brand-name gold-text">AETHERA</div>
-            <div class="brand-tag gold-text" data-i18n="brand-tag">GREEK PREMIUM HONEY</div>
+            <div class="brand-tag gold-text" data-i18n="brand-tag">GREEK PREMIUM PRODUCTS</div>
           </div>
         </a>
         <div class="header-actions">
