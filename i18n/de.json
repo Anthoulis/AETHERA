@@ -21,9 +21,9 @@
   "home-products-title": "Signature Portfolio",
   "home-products-lead": "Eine kuratierte Auswahl sortenreinen Honigs und EVOO mit klarem Terroir, für Regal und Großhandel.",
   "home-product1-title": "AETHERA Thymianhonig",
-  "home-product1-desc": "Gläser 250g / 450g / 950g, matt Schwarz & Gold, bereit für Gourmet-Regale oder Geschenke.",
+  "home-product1-desc": "Sortenreine Chargen in Retail- und Bulk-Formaten, mit vollständigen Laboranalysen und EU-konformer Kennzeichnung für den Export.",
   "home-product2-title": "Natives Olivenöl extra",
-  "home-product2-desc": "Kaltgepresstes EVOO in dunklen Flaschen für Retail sowie Bulk-Dosen/IBC für HORECA.",
+  "home-product2-desc": "Sortenreine Chargen in Retail- und Bulk-Formaten, mit vollständigen Laboranalysen und EU-konformer Kennzeichnung für den Export.",
   "home-experience-eyebrow": "Die AETHERA Experience",
   "home-experience-title": "Geschmack, der beim Frühstück und Fine Dining auffällt",
   "home-experience-body1": "Vom Frühstückstisch mit Joghurtcreme und frischem Brot bis zum Gourmet-Teller mit EVOO – AETHERA verbindet reine Aromen mit eleganter Präsentation.",
@@ -186,5 +186,13 @@
 
   "footer-copy": "© 2025 AETHERA. Alle Rechte vorbehalten.",
   "footer-privacy": "Datenschutz",
-  "footer-terms": "AGB"
+  "footer-terms": "AGB",
+  "home-who-body-3": "Heute arbeiten wir mit Importeuren, Feinkosthändlern und HORECA-Partnern in ganz Europa zusammen, liefern konstante Chargen und Premium-Verpackungen für das Regal und erweitern unser Portfolio schrittweise um weitere hochwertige griechische Produkte, die denselben Standards entsprechen.",
+  "home-products-microcopy": "Retail-, Bulk- und Private-Label-Formate.",
+  "home-product1-label": "Sortenreiner Honig",
+  "home-product1-cta": "Honig entdecken",
+  "home-product2-label": "Sortenreines Olivenöl",
+  "home-product2-cta": "Olivenöl entdecken",
+  "home-cert-body-sub": "HMF, Diastase, Feuchte • Foto-QC • EU-konforme Kennzeichnung",
+  "home-cert-link": "Dokumentation anfordern"
 }

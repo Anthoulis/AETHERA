@@ -2,6 +2,7 @@
 import { StorageService } from "../services/StorageService.js";
 import { HeaderComponent } from "../components/HeaderComponent.js";
 import { FooterComponent } from "../components/FooterComponent.js";
+import { CtaComponent } from "../components/CtaComponent.js";
 
 /**
  * Boots shared chrome (header/footer) and language layer for any page.
@@ -35,8 +36,12 @@ export class PageController {
   renderChrome() {
     const headerMount = document.getElementById("header") || this._ensure("header");
     const footerMount = document.getElementById("footer") || this._ensure("footer");
+    const prefooterMount = document.getElementById("prefooter");
 
     headerMount.replaceChildren(new HeaderComponent({ langManager: this.langManager }).render());
+    if (prefooterMount) {
+      prefooterMount.replaceChildren(new CtaComponent().render());
+    }
     footerMount.replaceChildren(new FooterComponent().render());
   }
 
