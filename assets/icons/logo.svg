@@ -1,13 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="AETHERA logo">
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="AETHERA logo">
   <defs>
-    <!-- Warm gold gradient for strokes and fills -->
     <linearGradient id="gold" x1="32" y1="24" x2="224" y2="232" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#f0d98a"/>
       <stop offset="0.42" stop-color="#e0c062"/>
       <stop offset="0.72" stop-color="#cfa72b"/>
       <stop offset="1" stop-color="#a4771a"/>
     </linearGradient>
-    <!-- Subtle highlight for filled shapes -->
     <radialGradient id="goldSoft" cx="35%" cy="30%" r="75%">
       <stop offset="0" stop-color="#ffe9a8" stop-opacity=".9"/>
       <stop offset="0.45" stop-color="#e7c565" stop-opacity=".85"/>
@@ -15,47 +13,39 @@
     </radialGradient>
   </defs>
 
-  <!-- Outer ring with a refined open gap on the right side -->
-  <circle cx="128" cy="128" r="110" fill="none" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"
-          stroke-dasharray="600 120" stroke-dashoffset="68"/>
+  <circle
+    cx="128"
+    cy="128"
+    r="110"
+    fill="none"
+    stroke="url(#gold)"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-dasharray="600 120"
+    stroke-dashoffset="68"
+  />
 
-  <!-- Serif 'A' -->
   <g fill="none" stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round">
-    <!-- A legs -->
     <path d="M96 200 L128 56 L184 200" stroke-width="16"/>
-    <!-- A crossbar -->
     <path d="M112 148 H164" stroke-width="12"/>
   </g>
 
-  <!-- Olive branch hugging the upper-left of the ring -->
   <g stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round">
-    <!-- branch curve -->
-    <path d="M65 108 C 82 86, 102 72, 132 68" fill="none" stroke-width="7"/>
-    <!-- leaves -->
-    <path d="M74 104 C68 98, 66 92, 70 86 C76 84, 82 88, 84 94 C82 100, 78 104, 74 104 Z" fill="url(#goldSoft)" stroke-width="2"/>
-    <path d="M92 92 C86 86, 86 80, 92 76 C98 76, 104 80, 104 86 C100 90, 96 92, 92 92 Z" fill="url(#goldSoft)" stroke-width="2"/>
-    <path d="M110 84 C104 78, 106 72, 112 70 C118 70, 124 74, 124 80 C120 82, 116 84, 110 84 Z" fill="url(#goldSoft)" stroke-width="2"/>
-    <!-- olives -->
+    <path d="M65 108 C82 86 102 72 132 68" fill="none" stroke-width="7"/>
+    <path d="M74 104 C68 98 66 92 70 86 C76 84 82 88 84 94 C82 100 78 104 74 104Z" fill="url(#goldSoft)" stroke-width="2"/>
+    <path d="M92 92 C86 86 86 80 92 76 C98 76 104 80 104 86 C100 90 96 92 92 92Z" fill="url(#goldSoft)" stroke-width="2"/>
+    <path d="M110 84 C104 78 106 72 112 70 C118 70 124 74 124 80 C120 82 116 84 110 84Z" fill="url(#goldSoft)" stroke-width="2"/>
     <ellipse cx="86" cy="112" rx="6.5" ry="5" fill="url(#gold)" stroke-width="2"/>
     <ellipse cx="104" cy="100" rx="6" ry="4.5" fill="url(#gold)" stroke-width="2"/>
   </g>
 
-  <!-- Bee icon tucked left of the 'A' -->
   <g transform="translate(66,156)" stroke-linecap="round" stroke-linejoin="round">
-    <!-- wings -->
-    <path d="M18 0 C 2 -10, -10 -10, -18 0" fill="none" stroke="url(#gold)" stroke-width="5"/>
-    <path d="M18 4 C 2 12, -8 12, -16 6" fill="none" stroke="url(#gold)" stroke-width="5"/>
-    <!-- body -->
+    <path d="M18 0 C2-10-10-10-18 0" fill="none" stroke="url(#gold)" stroke-width="5"/>
+    <path d="M18 4 C2 12-8 12-16 6" fill="none" stroke="url(#gold)" stroke-width="5"/>
     <ellipse cx="26" cy="12" rx="18" ry="12" fill="url(#goldSoft)" stroke="url(#gold)" stroke-width="4"/>
-    <!-- stripes -->
-    <path d="M14 12 H38" stroke="#a4771a" stroke-width="3"/>
-    <path d="M16 8 H36" stroke="#a4771a" stroke-width="3"/>
-    <path d="M16 16 H36" stroke="#a4771a" stroke-width="3"/>
-    <!-- head + antennae -->
+    <path d="M14 12 H38 M16 8 H36 M16 16 H36" stroke="#a4771a" stroke-width="3"/>
     <circle cx="10" cy="12" r="6" fill="url(#goldSoft)" stroke="url(#gold)" stroke-width="4"/>
-    <path d="M6 6 C 2 2, 0 0, -2 -2" fill="none" stroke="url(#gold)" stroke-width="3"/>
-    <path d="M10 5 C 8 1, 6 -1, 4 -3" fill="none" stroke="url(#gold)" stroke-width="3"/>
-    <!-- stinger hint -->
-    <path d="M44 12 l6 2 l-6 2" fill="none" stroke="url(#gold)" stroke-width="3"/>
+    <path d="M6 6 C2 2 0 0-2-2 M10 5 C8 1 6-1 4-3" fill="none" stroke="url(#gold)" stroke-width="3"/>
+    <path d="M44 12 L50 14 L44 16" fill="none" stroke="url(#gold)" stroke-width="3"/>
   </g>
 </svg>

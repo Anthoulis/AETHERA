@@ -1,0 +1,17 @@
+{
+  "name": "AETHERA Greek Premium Products",
+  "short_name": "AETHERA",
+  "description": "Greek honey and olive oil for wholesale partners.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffdf8",
+  "theme_color": "#102019",
+  "icons": [
+    {
+      "src": "/assets/icons/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

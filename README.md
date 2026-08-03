@@ -1,72 +1,133 @@
 # AETHERA Website
 
-**AETHERA** is a premium Greek brand from Kos Island, starting with honey and expanding into more natural products.  
-This repository contains the official website for promoting our products.  
+Official multilingual website for AETHERA, a Greek premium-products business
+from Kos Island. The production target is `https://www.aethera.gr`.
 
----
+The public site remains package-free: plain HTML, one CSS file, vanilla
+JavaScript modules, and JSON translation dictionaries are deployed directly to
+Netlify without a frontend build. Wholesale enquiries are sent to a public
+Supabase Edge Function, checked by Cloudflare Turnstile and distributed Upstash
+rate limits, then delivered by Resend. The application does not create an
+enquiry database or persist enquiry payloads itself.
 
-## 🌱 Current Phase
-We start simple with a **static HTML + CSS site** for fast implementation.  
-Later, we will experiment with **Next.js** and **Laravel** in separate branches before deciding the long-term stack.
+## Architecture
 
-- **`main` branch** → Static site (HTML + CSS)  
-- **`nextjs-version` branch** → Next.js (React + TypeScript + Tailwind) experiment  
-- **`laravel-version` branch** → Laravel (PHP + Blade templates) experiment  
-
----
-
-## 📂 Project Structure
+```text
+Browser on Netlify
+  -> client validation + Turnstile
+  -> Supabase Edge Function
+       -> strict server validation
+       -> Upstash short/long rate limits
+       -> Turnstile server verification
+       -> Resend email
+  -> localized success or error feedback
 ```
+
+Private credentials exist only as Supabase function secrets. The Turnstile
+site key and Edge Function URL in `assets/js/enquiry/config.mjs` are public
+browser configuration.
+
+## Project structure
+
+```text
 aethera-website/
-│
-├── index.html             # Home
-├── about.html             # About page
-├── products.html          # Products overview
-├── contact.html           # Contact page
-│
-├── legal/
-│   ├── privacy.html
-│   └── terms.html
-│
-└── assets/
-    ├── css/
-    │   └── style.css      # Global CSS
-    ├── images/            # Logos, product images
-    └── docs/              # PDFs, lab results, resources
+  contact.html
+  assets/
+    css/style.css
+    js/
+      site.js
+      enquiry/
+  i18n/
+  legal/
+  supabase/
+    config.toml
+    functions/send-enquiry/
+  tools/
+    validate-site.mjs
+    test-enquiry-frontend.mjs
+  docs/
+    ENQUIRY_DEPLOYMENT.md
+  netlify.toml
+  .env.example
 ```
----
 
-## ⚙️ Getting Started
+## Run the static site locally
 
-### Requirements
-- [Visual Studio Code](https://code.visualstudio.com/)  
-- (optional) [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for hot reload  
-- Git for version control  
+Translation files and JavaScript modules use HTTP and root-relative paths, so
+do not open the HTML files with `file://`.
 
-### Run Locally
-1. Clone the repo:
-   bash
-   git clone https://github.com/YOUR-USERNAME/aethera-website.git
-   cd aethera-website
+```powershell
+python -m http.server 8000
+```
 
-2. Open the project in VS Code:
-   bash
-   code .
-   
-3. Open `index.html` in your browser  
-   or use **Live Server** for auto-reload.
+Open `http://localhost:8000/`. The local public form configuration points to
+Supabase on `http://127.0.0.1:54321` and uses Cloudflare's visible always-pass
+test site key. A complete local submission also requires the function setup in
+[the enquiry deployment guide](docs/ENQUIRY_DEPLOYMENT.md).
 
----
+## Quality checks
 
-## 🚀 Future Plans
-- Add **Next.js** branch with React + TypeScript + Tailwind (modern, SEO-friendly stack).  
-- Add **Laravel** branch for backend-heavy experimentation.  
-- Introduce e-commerce: shopping cart, account system (Google/Apple sign-in), Stripe/PayPal integration.  
-- Expand into multi-language (English & Greek).  
-- Deploy on **Vercel / Netlify** (static or Next.js) or custom server (Laravel).  
+The frontend has no install or build step. Node.js is used only for checks:
 
----
+```powershell
+node --check assets/js/site.js
+Get-ChildItem assets/js/enquiry/*.mjs | ForEach-Object { node --check $_.FullName }
+node --test tools/test-enquiry-frontend.mjs
+node --check tools/validate-site.mjs
+node tools/validate-site.mjs
+git diff --check
+```
 
-## 📜 License
-All rights reserved © 2025 AETHERA.
+Run the Edge Function checks from its directory with Deno:
 
+```powershell
+Set-Location supabase/functions/send-enquiry
+deno task check
+deno task lint
+deno task test
+```
+
+The Edge Function tests mock Turnstile, Upstash, and Resend. They do not send
+real email. Before release, also complete the browser and safe staging checks
+in [the release process](docs/RELEASE_PROCESS.md).
+
+## Hosting
+
+Netlify publishes the repository root with no build command. Keep the Netlify
+dashboard build command empty. `netlify.toml` defines the site's security and
+cache headers; replace its placeholder Supabase CSP origin with the exact
+project origin before deployment.
+
+The function is deployed independently to Supabase. Full account setup,
+secrets, sender verification, CORS, CSP, logs, key rotation, limitations, and a
+deployment checklist are documented in
+[docs/ENQUIRY_DEPLOYMENT.md](docs/ENQUIRY_DEPLOYMENT.md).
+
+## Branch workflow
+
+- `develop` — active development.
+- `staging` — release candidate and final QA.
+- `production` — live website branch.
+- `main` — approved stable milestones.
+- `feature/*`, `fix/*`, and `hotfix/*` — isolated work.
+
+Normal release flow:
+
+```text
+feature/* or fix/* -> develop -> staging -> production -> main
+```
+
+Only promote a tested staging commit to `production`. See the detailed
+[release process](docs/RELEASE_PROCESS.md).
+
+## Documentation
+
+- [Architecture](docs/ARCHITECTURE.md)
+- [Enquiry deployment and operations](docs/ENQUIRY_DEPLOYMENT.md)
+- [Release process](docs/RELEASE_PROCESS.md)
+- [Project review notes](docs/PROJECT_REVIEW.md)
+- [Reusable chat roles](docs/CHAT_AGENTS.md)
+
+## Rights
+
+Copyright © 2026 AETHERA. All rights reserved.

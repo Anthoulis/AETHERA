@@ -1,85 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wholesale Enquiries | AETHERA</title>
-  <link rel="stylesheet" href="assets/css/style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta-contact-title">Wholesale enquiries | AETHERA</title>
+  <meta name="description" content="Contact AETHERA about wholesale honey and olive oil formats, volumes, documentation, and delivery requirements." data-i18n-content="meta-contact-description">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#102019">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://www.aethera.gr/contact.html">
+  <link rel="icon" href="/assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AETHERA">
+  <meta property="og:title" content="Wholesale enquiries | AETHERA" data-i18n-content="meta-contact-title">
+  <meta property="og:description" content="Contact AETHERA about wholesale honey and olive oil formats, volumes, documentation, and delivery requirements." data-i18n-content="meta-contact-description">
+  <meta property="og:url" content="https://www.aethera.gr/contact.html">
+  <meta property="og:image" content="https://www.aethera.gr/assets/images/hero-optimized.jpg">
+  <meta property="og:image:alt" content="AETHERA honey and olive oil from Kos" data-i18n-content="meta-social-image-alt">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body class="page-contact">
   <div id="header"></div>
 
-  <section class="section">
-    <div class="container">
-      <h1 data-i18n="contact-title">Wholesale Enquiries</h1>
-      <p class="lead" data-i18n="contact-lead">Tell us about your business and volume needs. We reply within 24 hours.</p>
+  <main id="main-content">
+    <section class="page-intro contact-intro" aria-labelledby="contact-title">
+      <div class="container">
+        <p class="eyebrow" data-i18n="contact-eyebrow">Wholesale partnerships</p>
+        <h1 id="contact-title" data-i18n="contact-title">Tell us what your market needs</h1>
+        <p class="lead" data-i18n="contact-lead">Share your business, estimated volume, destination, and preferred format. We will respond with focused next steps.</p>
+      </div>
+    </section>
 
-      <!-- Provider-agnostic form; wired to FormSubmit by default -->
-      <form
-        class="products gap-4"
-        method="post"
-        action="https://formsubmit.co/hello@aethera.gr"
-        data-wholesale-form
-        data-endpoint="https://formsubmit.co/ajax/hello@aethera.gr"
-      >
-        <div>
-          <label for="company" data-i18n="contact-company-label">Company name</label>
-          <input id="company" name="company" class="input" required>
-        </div>
-        <div>
-          <label for="country" data-i18n="contact-country-label">Country</label>
-          <input id="country" name="country" class="input" required>
-        </div>
-        <div>
-          <label for="contact-person" data-i18n="contact-person-label">Contact person</label>
-          <input id="contact-person" name="contactPerson" class="input" required>
-        </div>
-        <div>
-          <label for="email" data-i18n="contact-email-label">Work email</label>
-          <input id="email" type="email" name="email" class="input" required>
-        </div>
-        <div>
-          <label for="business-type" data-i18n="contact-business-label">Type of business</label>
-          <select id="business-type" name="businessType" class="input" required>
-            <option value="" disabled selected data-i18n="contact-business-placeholder">Select</option>
-            <option data-i18n="contact-business-1">Wholesaler / Distributor</option>
-            <option data-i18n="contact-business-2">Supermarket / Retail chain</option>
-            <option data-i18n="contact-business-3">Food importer</option>
-            <option data-i18n="contact-business-4">Delicacy / Specialty store</option>
-            <option data-i18n="contact-business-5">Hotel / HORECA</option>
-            <option data-i18n="contact-business-6">Other</option>
-          </select>
-        </div>
-        <div>
-          <label for="product-interest" data-i18n="contact-product-label">Product interest</label>
-          <select id="product-interest" name="productInterest" class="input" required>
-            <option value="" disabled selected data-i18n="contact-product-placeholder">Select</option>
-            <option data-i18n="contact-product-1">Retail jars</option>
-            <option data-i18n="contact-product-2">Bulk drums</option>
-            <option data-i18n="contact-product-3">Both retail &amp; bulk</option>
-          </select>
-        </div>
-        <div>
-          <label for="annual-volume" data-i18n="contact-volume-label">Estimated annual volume</label>
-          <input id="annual-volume" name="annualVolume" class="input" placeholder="e.g. 1-2 tons / year" data-i18n-placeholder="contact-volume-placeholder" required>
-        </div>
-        <div class="span-all">
-          <label for="requirements" data-i18n="contact-req-label">Additional requirements</label>
-          <textarea id="requirements" name="requirements" rows="5" class="input" placeholder="Label languages, incoterms, timelines, delivery notes" data-i18n-placeholder="contact-req-placeholder"></textarea>
-        </div>
-        <div>
-          <button class="btn" type="submit" data-i18n="contact-submit">Send enquiry</button>
-        </div>
-        <div class="span-all">
-          <div class="form-status" data-form-status aria-live="polite"></div>
-        </div>
-      </form>
+    <section class="section contact-section" aria-labelledby="contact-form-title">
+      <div class="container contact-layout">
+        <aside class="contact-guide">
+          <p class="eyebrow" data-i18n="contact-guide-eyebrow">A useful first enquiry</p>
+          <h2 data-i18n="contact-guide-title">The details that help us respond precisely</h2>
+          <ul class="contact-guide-list">
+            <li>
+              <span aria-hidden="true">01</span>
+              <p data-i18n="contact-guide-1">Product and preferred retail or bulk format</p>
+            </li>
+            <li>
+              <span aria-hidden="true">02</span>
+              <p data-i18n="contact-guide-2">Expected annual volume and first-order timing</p>
+            </li>
+            <li>
+              <span aria-hidden="true">03</span>
+              <p data-i18n="contact-guide-3">Destination market and any labelling requirements</p>
+            </li>
+          </ul>
+          <div class="contact-direct">
+            <p data-i18n="contact-direct-label">Prefer to write directly?</p>
+            <a href="mailto:hello@aethera.gr">hello@aethera.gr</a>
+          </div>
+        </aside>
 
-      <p class="mt-4" data-i18n="contact-email">Prefer email? <a href="mailto:hello@aethera.gr">hello@aethera.gr</a></p>
-    </div>
-  </section>
+        <div class="contact-form-panel">
+          <h2 id="contact-form-title" data-i18n="contact-form-title">Wholesale enquiry</h2>
+          <p id="contact-form-note" class="form-note" data-i18n="contact-form-note">Required fields are marked with an asterisk.</p>
+          <p class="form-status" aria-live="polite" aria-atomic="true" tabindex="-1" hidden data-form-status></p>
+
+          <form
+            class="contact-form"
+            method="post"
+            accept-charset="UTF-8"
+            aria-describedby="contact-form-note"
+            aria-busy="false"
+            data-enquiry-form
+            novalidate
+          >
+            <div class="honeypot" aria-hidden="true">
+              <label for="website">Leave this field empty</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="field">
+              <label for="company"><span data-i18n="contact-company-label">Company name</span> <span aria-hidden="true">*</span></label>
+              <input id="company" name="company" type="text" autocomplete="organization" minlength="2" maxlength="120" aria-describedby="company-error" required>
+              <p id="company-error" class="field-error" hidden data-field-error="company"></p>
+            </div>
+            <div class="field">
+              <label for="country"><span data-i18n="contact-country-label">Country</span> <span aria-hidden="true">*</span></label>
+              <input id="country" name="country" type="text" autocomplete="country-name" minlength="2" maxlength="80" aria-describedby="country-error" required>
+              <p id="country-error" class="field-error" hidden data-field-error="country"></p>
+            </div>
+            <div class="field">
+              <label for="contact-person"><span data-i18n="contact-person-label">Contact person</span> <span aria-hidden="true">*</span></label>
+              <input id="contact-person" name="contactPerson" type="text" autocomplete="name" minlength="2" maxlength="100" aria-describedby="contact-person-error" required>
+              <p id="contact-person-error" class="field-error" hidden data-field-error="contactPerson"></p>
+            </div>
+            <div class="field">
+              <label for="email"><span data-i18n="contact-email-label">Work email</span> <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" minlength="3" maxlength="160" aria-describedby="email-error" required>
+              <p id="email-error" class="field-error" hidden data-field-error="email"></p>
+            </div>
+            <div class="field">
+              <label for="business-type"><span data-i18n="contact-business-label">Type of business</span> <span aria-hidden="true">*</span></label>
+              <select id="business-type" name="businessType" aria-describedby="business-type-error" required>
+                <option value="" disabled selected data-i18n="contact-business-placeholder">Select an option</option>
+                <option value="wholesaler-distributor" data-i18n="contact-business-1">Wholesaler or distributor</option>
+                <option value="retail-chain" data-i18n="contact-business-2">Supermarket or retail chain</option>
+                <option value="food-importer" data-i18n="contact-business-3">Food importer</option>
+                <option value="specialty-retail" data-i18n="contact-business-4">Delicatessen or specialty store</option>
+                <option value="horeca" data-i18n="contact-business-5">Hotel, restaurant, or catering</option>
+                <option value="other" data-i18n="contact-business-6">Other</option>
+              </select>
+              <p id="business-type-error" class="field-error" hidden data-field-error="businessType"></p>
+            </div>
+            <div class="field">
+              <label for="product-interest"><span data-i18n="contact-product-label">Product interest</span> <span aria-hidden="true">*</span></label>
+              <select id="product-interest" name="productInterest" aria-describedby="product-interest-error" required>
+                <option value="" disabled selected data-i18n="contact-product-placeholder">Select an option</option>
+                <option value="retail" data-i18n="contact-product-1">Retail formats</option>
+                <option value="bulk" data-i18n="contact-product-2">Bulk formats</option>
+                <option value="retail-and-bulk" data-i18n="contact-product-3">Retail and bulk</option>
+              </select>
+              <p id="product-interest-error" class="field-error" hidden data-field-error="productInterest"></p>
+            </div>
+            <div class="field span-all">
+              <label for="annual-volume"><span data-i18n="contact-volume-label">Estimated annual volume</span> <span aria-hidden="true">*</span></label>
+              <input id="annual-volume" name="annualVolume" type="text" minlength="2" maxlength="100" placeholder="For example: 1–2 tonnes per year" data-i18n-placeholder="contact-volume-placeholder" aria-describedby="annual-volume-error" required>
+              <p id="annual-volume-error" class="field-error" hidden data-field-error="annualVolume"></p>
+            </div>
+            <div class="field span-all">
+              <label for="requirements" data-i18n="contact-req-label">Additional requirements</label>
+              <textarea id="requirements" name="requirements" rows="6" maxlength="2000" placeholder="Labelling languages, Incoterms, timing, or delivery notes" data-i18n-placeholder="contact-req-placeholder" aria-describedby="requirements-error"></textarea>
+              <p id="requirements-error" class="field-error" hidden data-field-error="requirements"></p>
+            </div>
+            <div class="turnstile-field span-all">
+              <p id="turnstile-note" class="form-note" data-i18n="contact-turnstile-note">Complete the security check before sending your enquiry.</p>
+              <div data-turnstile-container aria-describedby="turnstile-note"></div>
+            </div>
+            <p class="form-privacy span-all">
+              <span data-i18n="contact-privacy-prefix">By submitting this form, you acknowledge our</span>
+              <a href="/legal/privacy.html" data-i18n="footer-privacy">privacy policy</a>.
+            </p>
+            <div class="form-actions span-all">
+              <button class="btn btn-primary" type="submit" disabled data-i18n="contact-submit">Send enquiry</button>
+            </div>
+          </form>
+
+          <div hidden aria-hidden="true">
+            <span data-enquiry-copy="submit" data-i18n="contact-submit">Send enquiry</span>
+            <span data-enquiry-copy="statusSending" data-i18n="contact-status-sending">Sending your enquiry…</span>
+            <span data-enquiry-copy="statusSuccess" data-i18n="contact-status-success">Thank you — your wholesale enquiry was submitted successfully. We’ll reply to the work email you provided.</span>
+            <span data-enquiry-copy="statusFailure" data-i18n="contact-status-failure">We couldn’t send your enquiry. Your details are still here. Please try again, or email hello@aethera.gr.</span>
+            <span data-enquiry-copy="statusInvalid" data-i18n="contact-status-invalid">Please review the highlighted fields and try again.</span>
+            <span data-enquiry-copy="statusSecurity" data-i18n="contact-status-security">Please complete the security check and try again.</span>
+            <span data-enquiry-copy="statusRateLimit" data-i18n="contact-status-rate-limit">Too many attempts were received. Please wait before trying again, or email hello@aethera.gr.</span>
+            <span data-enquiry-copy="statusUnavailable" data-i18n="contact-status-unavailable">The enquiry form is temporarily unavailable. Please email hello@aethera.gr.</span>
+            <span data-enquiry-copy="turnstileLoading" data-i18n="contact-turnstile-loading">Loading the security check…</span>
+            <span data-enquiry-copy="turnstileUnavailable" data-i18n="contact-turnstile-unavailable">The security check could not load. Please refresh the page, or email hello@aethera.gr.</span>
+            <span data-enquiry-copy="errorRequired" data-i18n="contact-error-required">This field is required.</span>
+            <span data-enquiry-copy="errorTooShort" data-i18n="contact-error-too-short">Please enter a little more information.</span>
+            <span data-enquiry-copy="errorTooLong" data-i18n="contact-error-too-long">This value is too long.</span>
+            <span data-enquiry-copy="errorInvalidEmail" data-i18n="contact-error-email">Enter a valid email address.</span>
+            <span data-enquiry-copy="errorInvalidOption" data-i18n="contact-error-option">Choose one of the available options.</span>
+            <span data-enquiry-copy="errorInvalidCharacters" data-i18n="contact-error-characters">Remove unsupported control characters.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <div id="footer"></div>
-  <script type="module" src="./src/app.js"></script>
+  <script src="/assets/js/site.js" defer></script>
+  <script type="module" src="/assets/js/enquiry/form-controller.mjs"></script>
 </body>
 </html>

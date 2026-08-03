@@ -1,0 +1,25 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor and workspace noise
+*.code-workspace
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Local tool and hosting output
+.codex-remote-attachments/
+node_modules/
+coverage/
+.netlify/
+supabase/.branches/
+supabase/.temp/

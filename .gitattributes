@@ -1,0 +1,9 @@
+# Keep source and documentation line endings stable across platforms.
+* text=auto eol=lf
+
+# Binary assets should never be line-ending normalized.
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.ico binary

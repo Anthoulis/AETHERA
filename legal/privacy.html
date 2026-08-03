@@ -1,40 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy | AETHERA</title>
-  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta-privacy-title">Privacy policy | AETHERA</title>
+  <meta name="description" content="How AETHERA handles information submitted through this website and the rights available to visitors." data-i18n-content="meta-privacy-description">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#102019">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://www.aethera.gr/legal/privacy.html">
+  <link rel="icon" href="/assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AETHERA">
+  <meta property="og:title" content="Privacy policy | AETHERA" data-i18n-content="meta-privacy-title">
+  <meta property="og:description" content="How AETHERA handles information submitted through this website and the rights available to visitors." data-i18n-content="meta-privacy-description">
+  <meta property="og:url" content="https://www.aethera.gr/legal/privacy.html">
+  <meta name="twitter:card" content="summary">
 </head>
 <body class="page-legal page-privacy">
   <div id="header"></div>
 
-  <section class="section">
-    <div class="container">
-      <h1 data-i18n="privacy-title">Privacy Policy</h1>
-      <p data-i18n="privacy-intro">This is a lightweight placeholder. Replace with your final GDPR-compliant text.</p>
+  <main id="main-content">
+    <article class="legal-document">
+      <header class="legal-header">
+        <div class="container legal-container">
+          <p class="eyebrow" data-i18n="privacy-eyebrow">Website information</p>
+          <h1 data-i18n="privacy-title">Privacy policy</h1>
+          <p class="lead" data-i18n="privacy-intro">This policy explains what personal information AETHERA receives through this website, why it is used, and the choices available to you.</p>
+          <p class="legal-updated"><span data-i18n="legal-updated">Last updated</span>: <time datetime="2026-08-03" data-i18n="legal-date">3 August 2026</time></p>
+        </div>
+      </header>
 
-      <h2 data-i18n="privacy-collect-title">What We Collect</h2>
-      <ul>
-        <li data-i18n="privacy-collect-item1">Contact form fields (name, email, message).</li>
-        <li data-i18n="privacy-collect-item2">No tracking cookies by default.</li>
-      </ul>
+      <div class="container legal-container legal-content">
+        <section aria-labelledby="privacy-controller-title">
+          <h2 id="privacy-controller-title" data-i18n="privacy-controller-title">1. Who is responsible for your information</h2>
+          <p data-i18n="privacy-controller-text">AETHERA is responsible for the personal information described in this policy. Questions and privacy requests can be sent to:</p>
+          <p><a href="mailto:hello@aethera.gr">hello@aethera.gr</a></p>
+        </section>
 
-      <h2 data-i18n="privacy-retention-title">Retention</h2>
-      <p data-i18n="privacy-retention-text">Contact submissions are retained only for as long as needed to respond.</p>
+        <section aria-labelledby="privacy-collect-title">
+          <h2 id="privacy-collect-title" data-i18n="privacy-collect-title">2. Information we receive</h2>
+          <p data-i18n="privacy-collect-intro">When you send a wholesale enquiry, the form asks for:</p>
+          <ul>
+            <li data-i18n="privacy-collect-item1">company name, country, and business type;</li>
+            <li data-i18n="privacy-collect-item2">contact name and work email address;</li>
+            <li data-i18n="privacy-collect-item3">product interests, estimated volume, and any requirements you choose to provide.</li>
+          </ul>
+          <p data-i18n="privacy-technical-text">The website’s hosting and security infrastructure may also process standard technical request information, such as IP address, browser type, requested page, and time of access. A pseudonymous identifier derived from the request address is kept briefly for rate limiting.</p>
+        </section>
 
-      <h2 data-i18n="privacy-contact-title">Contact</h2>
-      <p data-i18n="privacy-contact-text">Email: <a href="mailto:hello@aethera.gr">hello@aethera.gr</a></p>
-    </div>
-  </section>
+        <section aria-labelledby="privacy-use-title">
+          <h2 id="privacy-use-title" data-i18n="privacy-use-title">3. Why we use it</h2>
+          <p data-i18n="privacy-use-text">We use enquiry information to understand your request, respond, prepare requested product or commercial information, protect the form from abuse, and maintain necessary business correspondence.</p>
+          <p data-i18n="privacy-basis-text">Depending on the request, processing is necessary to take steps at your request before a possible business agreement and/or is based on AETHERA’s legitimate interest in answering business enquiries and operating a secure website.</p>
+        </section>
+
+        <section aria-labelledby="privacy-provider-title">
+          <h2 id="privacy-provider-title" data-i18n="privacy-provider-title">4. Form delivery and service providers</h2>
+          <p data-i18n="privacy-provider-text">The form sends your enquiry through a Supabase Edge Function. Cloudflare Turnstile checks for automated abuse, Upstash holds short-lived pseudonymous rate-limit counters, and Resend delivers the enquiry to AETHERA by email. The website does not create an enquiry database.</p>
+          <p data-i18n="privacy-hosting-text">Netlify, Supabase, Cloudflare, Upstash, Resend, and AETHERA’s email provider may process information where necessary to host, secure, transmit, and deliver the enquiry. Their processing may take place in other countries under the safeguards applicable to those providers.</p>
+        </section>
+
+        <section aria-labelledby="privacy-storage-title">
+          <h2 id="privacy-storage-title" data-i18n="privacy-storage-title">5. Local storage and cookies</h2>
+          <p data-i18n="privacy-storage-text">The site stores your chosen language in your browser’s local storage so it can be restored on your next visit. AETHERA does not use advertising or analytics cookies on these pages. Cloudflare Turnstile processes security data when you use the enquiry form.</p>
+        </section>
+
+        <section aria-labelledby="privacy-retention-title">
+          <h2 id="privacy-retention-title" data-i18n="privacy-retention-title">6. How long information is kept</h2>
+          <p data-i18n="privacy-retention-text">The website and Edge Function do not save the enquiry in an application database. Resend states that it retains email data for 30 days unless its eligible content-storage option is enabled. The delivered message remains in AETHERA’s mailbox and is kept only as long as reasonably needed to respond, manage a resulting business relationship, resolve disputes, and meet applicable record-keeping obligations.</p>
+        </section>
+
+        <section aria-labelledby="privacy-rights-title">
+          <h2 id="privacy-rights-title" data-i18n="privacy-rights-title">7. Your data-protection rights</h2>
+          <p data-i18n="privacy-rights-intro">Subject to the conditions in applicable law, you may ask to:</p>
+          <ul>
+            <li data-i18n="privacy-rights-item1">access or correct your personal information;</li>
+            <li data-i18n="privacy-rights-item2">erase it or restrict how it is used;</li>
+            <li data-i18n="privacy-rights-item3">object to processing based on legitimate interests;</li>
+            <li data-i18n="privacy-rights-item4">receive information you provided in a portable format where applicable.</li>
+          </ul>
+          <p data-i18n="privacy-rights-contact">To exercise a right, email AETHERA using the address above. We may need to verify your identity before responding.</p>
+          <p>
+            <span data-i18n="privacy-complaint-prefix">You may also lodge a complaint with the</span>
+            <a href="https://www.dpa.gr/en/individuals/complaint-to-the-hellenic-dpa" rel="external" data-i18n="privacy-complaint-link">Hellenic Data Protection Authority</a>.
+          </p>
+        </section>
+
+        <section aria-labelledby="privacy-security-title">
+          <h2 id="privacy-security-title" data-i18n="privacy-security-title">8. Security and data minimisation</h2>
+          <p data-i18n="privacy-security-text">AETHERA limits the form to information useful for a wholesale response and uses reasonable organisational and technical safeguards. No internet transmission or storage method can be guaranteed completely secure, so please do not submit sensitive personal information through the free-text field.</p>
+        </section>
+
+        <section aria-labelledby="privacy-changes-title">
+          <h2 id="privacy-changes-title" data-i18n="privacy-changes-title">9. Changes to this policy</h2>
+          <p data-i18n="privacy-changes-text">This policy may be updated when the website, service providers, or legal requirements change. The date at the top identifies the current version.</p>
+        </section>
+      </div>
+    </article>
+  </main>
 
   <div id="footer"></div>
-  <script type="module" src="../src/app.js"></script>
+  <script src="/assets/js/site.js" defer></script>
 </body>
 </html>
-
-
-
-
-
-

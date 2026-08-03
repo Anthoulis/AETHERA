@@ -1,0 +1,4 @@
+project_id = "aethera"
+
+[functions.send-enquiry]
+verify_jwt = false
